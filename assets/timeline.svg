@@ -1,6 +1,6 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink" width="84" height="2018" viewBox="0 0 84 2018">
+  xmlns:xlink="http://www.w3.org/1999/xlink" width="84" height="2018" viewBox="0 0 84 2018" id="timeline-svg">
   <defs>
     <style>
       .cls-1, .cls-2, .cls-5 {
@@ -43,7 +43,7 @@
         filter: url(#Line_1);
       }
     </style>
-    <filter id="Line_1" x="26.5" y="27" width="31" height="1991" filterUnits="userSpaceOnUse">
+    <filter id="Line_1" class="filter-line" x="26.5" y="27" width="31" height="1991" filterUnits="userSpaceOnUse">
       <feOffset input="SourceAlpha"/>
       <feGaussianBlur stdDeviation="5" result="blur"/>
       <feFlood flood-color="#fff"/>
@@ -79,9 +79,9 @@
       <feComposite in="SourceGraphic"/>
     </filter>
   </defs>
-  <g id="timeline-line" data-name="Group 18" transform="translate(-918.5 -498.5)">
+  <g id="parent-container" data-name="Group 18" transform="translate(-918.5 -498.5)">
     <g class="cls-10" transform="matrix(1, 0, 0, 1, 918.5, 498.5)">
-      <line id="Line_1-2" data-name="Line 1" class="cls-1" y2="1961" transform="translate(42 42)"/>
+      <line id="Line_1-2" data-name="Line 1" class="cls-1 timeline-line" y2="1961" transform="translate(42 42)"/>
     </g>
     <g id="start-point" data-name="Group 11">
       <g class="cls-9" transform="matrix(1, 0, 0, 1, 918.5, 498.5)">
@@ -98,13 +98,13 @@
       </g>
     </g>
     <g id="data-point" data-name="Group 2">
-      <g class="cls-7" transform="matrix(1, 0, 0, 1, 918.5, 498.5)">
+      <g class="cls-7 outer-circle" transform="matrix(1, 0, 0, 1, 918.5, 450)">
         <g id="Ellipse_3-2" data-name="Ellipse 3" class="cls-2" transform="translate(27.5 156.5)">
           <circle class="cls-4" cx="14.5" cy="14.5" r="14.5"/>
           <circle class="cls-5" cx="14.5" cy="14.5" r="14"/>
         </g>
       </g>
-      <g class="cls-6" transform="matrix(1, 0, 0, 1, 918.5, 498.5)">
+      <g class="cls-6 inner-circle" transform="matrix(1, 0, 0, 1, 918.5, 450)">
         <g id="Ellipse_4-2" data-name="Ellipse 4" class="cls-3" transform="translate(33.5 162.5)">
           <circle class="cls-4" cx="8.5" cy="8.5" r="8.5"/>
           <circle class="cls-5" cx="8.5" cy="8.5" r="8"/>

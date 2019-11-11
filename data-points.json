@@ -1,5 +1,21 @@
 [
   {
+    "invention of heliocentrizm": {
+      "events": "invention of heliocentrizm",
+      "date-of-discovery": null,
+      "year-of-discovery": "1543",
+      "memorable-contributors": "Nicolaus Copernicus",
+      "icon": "portrait of copernicus ???",
+      "mission-name": null,
+      "country-organization": "Poland",
+      "event-description": [
+        "Nicolaus Copernicus in his De revolutionibus orbium coelestium ( On the revolution of heavenly spheres",
+        "first printed in 1543 in Nuremberg)",
+        "presented a discussion of a heliocentric model of the universe in much the same way as Ptolemy in the 2nd century had presented his geocentric model in his Almagest."
+      ],
+      "time": "Past",
+      "data-link": null
+    },
     "First Telescope Patent": {
       "events": "First Telescope Patent",
       "date-of-discovery": null,
@@ -31,22 +47,6 @@
         "In 1609",
         "using this early version of the telescope",
         "Galileo became the first person to record observations of the sky made with the help of a telescope. He soon made his first astronomical discovery."
-      ],
-      "time": "Past",
-      "data-link": null
-    },
-    "invention of heliocentrizm": {
-      "events": "invention of heliocentrizm",
-      "date-of-discovery": null,
-      "year-of-discovery": "1543",
-      "memorable-contributors": "Nicolaus Copernicus",
-      "icon": "portrait of copernicus ???",
-      "mission-name": null,
-      "country-organization": "Poland",
-      "event-description": [
-        "Nicolaus Copernicus in his De revolutionibus orbium coelestium ( On the revolution of heavenly spheres",
-        "first printed in 1543 in Nuremberg)",
-        "presented a discussion of a heliocentric model of the universe in much the same way as Ptolemy in the 2nd century had presented his geocentric model in his Almagest."
       ],
       "time": "Past",
       "data-link": null
