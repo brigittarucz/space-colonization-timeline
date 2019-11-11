@@ -1,0 +1,115 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink" width="84" height="2018" viewBox="0 0 84 2018">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-5 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #fff;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-linejoin: bevel;
+      }
+
+      .cls-3 {
+        fill: rgba(255,255,255,0.32);
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+
+      .cls-6 {
+        filter: url(#Ellipse_4);
+      }
+
+      .cls-7 {
+        filter: url(#Ellipse_3);
+      }
+
+      .cls-8 {
+        filter: url(#Ellipse_2);
+      }
+
+      .cls-9 {
+        filter: url(#Ellipse_1);
+      }
+
+      .cls-10 {
+        filter: url(#Line_1);
+      }
+    </style>
+    <filter id="Line_1" x="26.5" y="27" width="31" height="1991" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#fff"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_1" x="0" y="0" width="84" height="84" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur-2"/>
+      <feFlood flood-color="#fff"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_2" x="20" y="20" width="44" height="44" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur-3"/>
+      <feFlood flood-color="#fff"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_3" x="20" y="149" width="44" height="44" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur-4"/>
+      <feFlood flood-color="#fff"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_4" x="26" y="155" width="32" height="32" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur-5"/>
+      <feFlood flood-color="#fff"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="timeline-line" data-name="Group 18" transform="translate(-918.5 -498.5)">
+    <g class="cls-10" transform="matrix(1, 0, 0, 1, 918.5, 498.5)">
+      <line id="Line_1-2" data-name="Line 1" class="cls-1" y2="1961" transform="translate(42 42)"/>
+    </g>
+    <g id="start-point" data-name="Group 11">
+      <g class="cls-9" transform="matrix(1, 0, 0, 1, 918.5, 498.5)">
+        <g id="Ellipse_1-2" data-name="Ellipse 1" class="cls-2" transform="translate(7.5 7.5)">
+          <circle class="cls-4" cx="34.5" cy="34.5" r="34.5"/>
+          <circle class="cls-5" cx="34.5" cy="34.5" r="34"/>
+        </g>
+      </g>
+      <g class="cls-8" transform="matrix(1, 0, 0, 1, 918.5, 498.5)">
+        <g id="Ellipse_2-2" data-name="Ellipse 2" class="cls-3" transform="translate(27.5 27.5)">
+          <circle class="cls-4" cx="14.5" cy="14.5" r="14.5"/>
+          <circle class="cls-5" cx="14.5" cy="14.5" r="14"/>
+        </g>
+      </g>
+    </g>
+    <g id="data-point" data-name="Group 2">
+      <g class="cls-7" transform="matrix(1, 0, 0, 1, 918.5, 498.5)">
+        <g id="Ellipse_3-2" data-name="Ellipse 3" class="cls-2" transform="translate(27.5 156.5)">
+          <circle class="cls-4" cx="14.5" cy="14.5" r="14.5"/>
+          <circle class="cls-5" cx="14.5" cy="14.5" r="14"/>
+        </g>
+      </g>
+      <g class="cls-6" transform="matrix(1, 0, 0, 1, 918.5, 498.5)">
+        <g id="Ellipse_4-2" data-name="Ellipse 4" class="cls-3" transform="translate(33.5 162.5)">
+          <circle class="cls-4" cx="8.5" cy="8.5" r="8.5"/>
+          <circle class="cls-5" cx="8.5" cy="8.5" r="8"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
