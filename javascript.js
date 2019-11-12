@@ -15,8 +15,13 @@ function appendSvgData(svgData) {
 
 let dataPointsLink = './data-points.json';
 let yearsArray = [];
+let futureYearsArray = [];
+let totalYearsArray = [];
 let yDataPointsArray = [ 450 ];
+let yFutureDataPointsArray = [ 2450 ];
+let yTotalDataPointsArray = [];
 let globalDataEvents = [];
+
 fetch(dataPointsLink).then((e) => e.json()).then((dataEvents) => showDataEvents(dataEvents));
 
 function showDataEvents(dataEvents) {
@@ -26,13 +31,15 @@ function showDataEvents(dataEvents) {
 	for (let i = 0; i < lengthObject; i++) {
 		if (dataEvents[0][keys[i]]['time'] == 'Past') {
 			yearsArray.push(dataEvents[0][keys[i]]['year-of-discovery']);
+		} else {
+			futureYearsArray.push(dataEvents[0][keys[i]]['year-of-discovery']);
 		}
 	}
 
 	populateTimeline();
 }
 
-// 1 year = 30;
+// 1 year = 40;
 // y = 450 data-point start
 
 function populateTimeline() {
@@ -42,7 +49,7 @@ function populateTimeline() {
 	let startingYear = yearsArray[0];
 	parseInt(startingYear);
 
-	// Create data point circles
+	// Create data point circles and append them by year
 
 	for (let i = 1; i < yearsArray.length; i++) {
 		let currentYear = yearsArray[i];
@@ -62,15 +69,17 @@ function populateTimeline() {
 		lineLength = (currentYear - startingYear) * 40 + 498.5;
 	}
 
-	createYearsTimeline();
+	console.log(lineLength);
 	generateTimeline(lineLength);
 }
 
 function createYearsTimeline() {
 	let yearsContainer = document.querySelector('#years-container');
-	for (let i = 0; i < yearsArray.length; i++) {
+	totalYearsArray = yearsArray.concat(futureYearsArray);
+
+	for (let i = 0; i < totalYearsArray.length; i++) {
 		let p = document.createElement('p');
-		p.textContent = yearsArray[i];
+		p.textContent = totalYearsArray[i];
 		p.setAttribute('class', 'yearParagraph');
 		yearsContainer.appendChild(p);
 	}
@@ -79,8 +88,21 @@ function createYearsTimeline() {
 
 function positionYearsTimeline() {
 	let yearsParagraphsArray = document.querySelectorAll('.yearParagraph');
-	for (let i = 0; i < yDataPointsArray.length; i++) {
-		yearsParagraphsArray[i].style.marginTop = yDataPointsArray[i] + 'px';
+	let lastVal = yDataPointsArray[yDataPointsArray.length - 1];
+
+	for (let i = 0; i < yFutureDataPointsArray.length; i++) {
+		yFutureDataPointsArray[i] += lastVal;
+		yFutureDataPointsArray[i] -= 1970;
+	}
+
+	console.log(yearsParagraphsArray);
+
+	yTotalDataPointsArray = yDataPointsArray.concat(yFutureDataPointsArray);
+
+	console.log(yTotalDataPointsArray);
+
+	for (let i = 0; i < yTotalDataPointsArray.length; i++) {
+		yearsParagraphsArray[i].style.marginTop = yTotalDataPointsArray[i] + 'px';
 	}
 }
 
@@ -102,19 +124,50 @@ function fetchFutureTimeline() {
 
 function addFutureTimeline(svgData) {
 	timelineContainer.innerHTML += svgData;
+	populateFutureTimeline();
 	fetchEndTimeline();
 }
 
 // #Repeat_Grid_1 for the first set of dashed lines
 // #Repeat_Grid_2 for the second set of lines
-// #Group_20 for the whole formation
+// #future-data-point id for data point included in the future timeline
+// #future-parent-container for the whole formation
+// 1 year = 240;
+// y = 2450 data-point start
+
+function populateFutureTimeline() {
+	// Same as with the past timeline
+
+	let dataPoint = document.querySelector('#future-data-point');
+	let parentContainer = document.querySelector('#future-parent-container');
+	console.log(futureYearsArray);
+
+	let startingYear = futureYearsArray[0];
+	parseInt(startingYear);
+
+	for (let i = 1; i < futureYearsArray.length; i++) {
+		let currentYear = futureYearsArray[i];
+		parseInt(currentYear);
+
+		let yDistance = (currentYear - startingYear) * 240 + 2450;
+
+		yFutureDataPointsArray.push(yDistance);
+
+		let cloneDP = dataPoint.cloneNode(true);
+		cloneDP.querySelector('.outer-circle').setAttribute('transform', `matrix(1,0,0,1,918.5,${yDistance})`);
+		cloneDP.querySelector('.inner-circle').setAttribute('transform', `matrix(1,0,0,1,918.5,${yDistance})`);
+		parentContainer.appendChild(cloneDP);
+	}
+
+	createYearsTimeline();
+}
 
 function fetchEndTimeline() {
 	let endTimeline = './assets/timeline-end.svg';
 	fetch(endTimeline).then((e) => e.text()).then((svgData) => addTimelineEnd(svgData));
 }
 
-// Margin left added as an inline style to the end element
+// margin-left added as an inline style to the end element
 
 function addTimelineEnd(svgData) {
 	timelineContainer.innerHTML += svgData;
