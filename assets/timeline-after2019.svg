@@ -63,6 +63,7 @@
       
       
       
+      
       <!-- .cls-1, .cls-2 {
         fill: none;
       }
@@ -676,7 +677,7 @@
     <g class="cls-57" transform="matrix(1, 0, 0, 1, 865.5, 2471)">
       <line id="Line_3-2" data-name="Line 3" class="cls-2" x1="159" transform="translate(15 35.5)"/>
     </g>
-    <g id="future-data-point" data-name="Group 2">
+    <g id="future-data-point" class="general-data-point" data-name="Group 2">
       <g class="cls-7 outer-circle" transform="matrix(1, 0, 0, 1, 918.5, 2450)">
         <g id="Ellipse_3-2" data-name="Ellipse 3" class="cls-2" transform="translate(27.5 156.5)">
           <circle class="cls-4" cx="14.5" cy="14.5" r="14.5"/>

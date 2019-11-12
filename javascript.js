@@ -62,6 +62,7 @@ function populateTimeline() {
 		let cloneDP = dataPoint.cloneNode(true);
 		cloneDP.querySelector('.outer-circle').setAttribute('transform', `matrix(1,0,0,1,918.5,${yDistance})`);
 		cloneDP.querySelector('.inner-circle').setAttribute('transform', `matrix(1,0,0,1,918.5,${yDistance})`);
+		cloneDP.setAttribute('height', yDistance);
 		parentContainer.appendChild(cloneDP);
 
 		// Calculates total length of SVG
@@ -176,6 +177,9 @@ function addTimelineEnd(svgData) {
 
 function addIconsTimeline() {
 	let parentContainer = document.querySelector('#svg-icons');
+
+	// because it is an object you can go through it through object.keys
+
 	let keys = Object.keys(globalDataEvents[0]);
 	let lengthObject = keys.length;
 	for (let i = 0; i < lengthObject; i++) {
@@ -193,4 +197,22 @@ function positionIcons() {
 	for (let i = 0; i < yTotalDataPointsArray.length; i++) {
 		icons[i].style.marginTop = yTotalDataPointsArray[i] + 'px';
 	}
+
+	addEventsDP();
+}
+
+function addEventsDP() {
+	let dataPoints = document.querySelectorAll('.general-data-point');
+	dataPoints.forEach((el) => el.addEventListener('click', showDetails));
+}
+
+let threeBranchLink = './assets/line-three-info.svg';
+
+function showDetails() {
+	// getBoundingClientRect gives you relative coords to the whole doc
+	console.log(event.target.getBoundingClientRect());
+	fetch(threeBranchLink).then((e) => e.text()).then((svgData) => {
+		let parentContainer = document.querySelector('#svg-info');
+		parentContainer.innerHTML += svgData;
+	});
 }

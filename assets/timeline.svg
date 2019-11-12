@@ -97,7 +97,7 @@
         </g>
       </g>
     </g>
-    <g id="data-point" data-name="Group 2">
+    <g id="data-point" class="general-data-point" data-name="Group 2">
       <g class="cls-7 outer-circle" transform="matrix(1, 0, 0, 1, 918.5, 450)">
         <g id="Ellipse_3-2" data-name="Ellipse 3" class="cls-2" transform="translate(27.5 156.5)">
           <circle class="cls-4" cx="14.5" cy="14.5" r="14.5"/>
