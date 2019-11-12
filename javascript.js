@@ -171,4 +171,26 @@ function fetchEndTimeline() {
 
 function addTimelineEnd(svgData) {
 	timelineContainer.innerHTML += svgData;
+	addIconsTimeline();
+}
+
+function addIconsTimeline() {
+	let parentContainer = document.querySelector('#svg-icons');
+	let keys = Object.keys(globalDataEvents[0]);
+	let lengthObject = keys.length;
+	for (let i = 0; i < lengthObject; i++) {
+		let img = document.createElement('img');
+		img.src = `./assets/${globalDataEvents[0][keys[i]]['image-link']}.png`;
+		img.setAttribute('class', 'svg-icon');
+		parentContainer.appendChild(img);
+	}
+	positionIcons();
+}
+
+function positionIcons() {
+	let icons = document.querySelectorAll('.svg-icon');
+
+	for (let i = 0; i < yTotalDataPointsArray.length; i++) {
+		icons[i].style.marginTop = yTotalDataPointsArray[i] + 'px';
+	}
 }

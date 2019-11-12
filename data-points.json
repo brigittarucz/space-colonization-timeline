@@ -14,7 +14,8 @@
         "presented a discussion of a heliocentric model of the universe in much the same way as Ptolemy in the 2nd century had presented his geocentric model in his Almagest."
       ],
       "time": "Past",
-      "data-link": null
+      "data-link": null,
+      "image-link": "illustrationDummy"
     },
     "First Telescope Patent": {
       "events": "First Telescope Patent",
@@ -33,7 +34,8 @@
         "he conceived of the idea when seeing two children holding up two lenses that appeared to make a distant weather vane appear closer."
       ],
       "time": "Past",
-      "data-link": " "
+      "data-link": " ",
+      "image-link": "illustrationDummy"
     },
     "First Telescopic Observation of Night Sky": {
       "events": "First Telescopic Observation of Night Sky",
@@ -49,7 +51,8 @@
         "Galileo became the first person to record observations of the sky made with the help of a telescope. He soon made his first astronomical discovery."
       ],
       "time": "Past",
-      "data-link": null
+      "data-link": null,
+      "image-link": "illustrationDummy"
     },
     "first photograph of the moon": {
       "events": "first photograph of the moon",
@@ -66,7 +69,8 @@
         "appeared to acquire a significant amount of physical damage."
       ],
       "time": "Past",
-      "data-link": null
+      "data-link": null,
+      "image-link": "illustrationDummy"
     },
     "observation of other galaxies": {
       "events": "observation of other galaxies",
@@ -78,7 +82,8 @@
       "country-organization": "UK/Ireland",
       "event-description": "First proper observation of other galaxies which are termed \"whirlpool nebulae\".",
       "time": "Past",
-      "data-link": null
+      "data-link": null,
+      "image-link": "illustrationDummy"
     },
     "baloon flight, seeing the curve": {
       "events": [
@@ -98,7 +103,8 @@
         "000ft (22.4 kilometres) – high enough that they became the first humans to see the curvature of the Earth with the naked eye. The desire to soar even higher was born."
       ],
       "time": "Past",
-      "data-link": null
+      "data-link": null,
+      "image-link": "illustrationDummy"
     },
     "first picture of earth from 105km": {
       "events": "first picture of earth from 105km",
@@ -114,7 +120,8 @@
         "captured by the Americans at the end of World War II. Hundreds of scientists and engineers from the Nazi rocket program were vital to the postwar development of the American and Russian space programs."
       ],
       "time": "Past",
-      "data-link": null
+      "data-link": null,
+      "image-link": "illustrationDummy"
     },
     "First artificial satellite": {
       "events": "First artificial satellite",
@@ -131,7 +138,8 @@
         "with four external radio antennas to broadcast radio pulses."
       ],
       "time": "Past",
-      "data-link": null
+      "data-link": null,
+      "image-link": "illustrationDummy"
     },
     "First human spaceflight ": {
       "events": "First human spaceflight ",
@@ -148,7 +156,8 @@
         "able to carry out a specific mission with no human involvement."
       ],
       "time": "Past",
-      "data-link": null
+      "data-link": null,
+      "image-link": "illustrationDummy"
     },
     "first human on moon": {
       "events": "first human on moon",
@@ -165,23 +174,8 @@
         "after a three-day flight from Earth"
       ],
       "time": "Past",
-      "data-link": null
-    },
-    "first space station": {
-      "events": "first space station",
-      "date-of-discovery": "19 April",
-      "year-of-discovery": "1971",
-      "memorable-contributors": null,
-      "icon": "space station",
-      "mission-name": "Salyut 1",
-      "country-organization": "USSR",
-      "event-description": [
-        "A space station",
-        "also known as an orbital station or an orbital space station",
-        "is a spacecraft capable of supporting a human crew in orbit for an extended period of time that lacks major propulsion or landing systems. Stations must have docking ports to allow other spacecraft to dock to transfer crew and supplies."
-      ],
-      "time": "Past",
-      "data-link": null
+      "data-link": null,
+      "image-link": "illustrationDummy"
     },
     "first photograph of the whole Solar System": {
       "events": "first photograph of the whole Solar System",
@@ -198,7 +192,8 @@
         "1990 from a distance of approximately 6 billion kilometers from Earth. It features individual frames of six planets and a partial background indicating their relative positions. The picture is a mosaic of 60 individual frames."
       ],
       "time": "Past",
-      "data-link": null
+      "data-link": null,
+      "image-link": "illustrationDummy"
     },
     "International Space Station\r": {
       "events": "International Space Station\r",
@@ -210,7 +205,8 @@
       "country-organization": "INternational",
       "event-description": null,
       "time": "Past",
-      "data-link": null
+      "data-link": null,
+      "image-link": "illustrationDummy"
     },
     "first soft landing on titan": {
       "events": "first soft landing on titan",
@@ -238,7 +234,8 @@
         "which might have offered habitable environments to stowaway terrestrial microbes on the spacecraft."
       ],
       "time": "Past",
-      "data-link": "https://en.wikipedia.org/wiki/Cassini%E2%80%93Huygens"
+      "data-link": "https://en.wikipedia.org/wiki/Cassini%E2%80%93Huygens",
+      "image-link": "illustrationDummy"
     },
     "First reusable Rocket": {
       "events": "First reusable Rocket",
@@ -250,7 +247,8 @@
       "country-organization": "Space X",
       "event-description": null,
       "time": "Past",
-      "data-link": "https://www.spacex.com/falcon9"
+      "data-link": "https://www.spacex.com/falcon9",
+      "image-link": "illustrationDummy"
     },
     "Launch of NASA Mars rover": {
       "events": "Launch of NASA Mars rover",
@@ -269,7 +267,8 @@
         "and testing oxygen production from the martian atmosphere."
       ],
       "time": "Future",
-      "data-link": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=MARS-2020"
+      "data-link": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=MARS-2020",
+      "image-link": "illustrationDummy"
     },
     "Launch of ESA mission to the Jupiter system": {
       "events": "Launch of ESA mission to the Jupiter system",
@@ -286,7 +285,8 @@
         "with particular emphasis on Ganymede as a planetary body and potential habitat"
       ],
       "time": "Future",
-      "data-link": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=JUICE"
+      "data-link": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=JUICE",
+      "image-link": "illustrationDummy"
     },
     "Launch of NASA Jupiter Orbiter to study Europa": {
       "events": "Launch of NASA Jupiter Orbiter to study Europa",
@@ -304,7 +304,8 @@
         "at distances of 2700 km to 25 km above the surface. It will also fly by Ganymede and Callisto as part of its orbit-shaping maneuvers."
       ],
       "time": "Future",
-      "data-link": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=EUROPA-CL"
+      "data-link": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=EUROPA-CL",
+      "image-link": "illustrationDummy"
     }
   }
 ]
