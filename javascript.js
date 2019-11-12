@@ -16,13 +16,17 @@ function appendSvgData(svgData) {
 let dataPointsLink = './data-points.json';
 let yearsArray = [];
 let yDataPointsArray = [ 450 ];
+let globalDataEvents = [];
 fetch(dataPointsLink).then((e) => e.json()).then((dataEvents) => showDataEvents(dataEvents));
 
 function showDataEvents(dataEvents) {
+	globalDataEvents = dataEvents;
 	let keys = Object.keys(dataEvents[0]);
 	let lengthObject = keys.length;
 	for (let i = 0; i < lengthObject; i++) {
-		yearsArray.push(dataEvents[0][keys[i]]['year-of-discovery']);
+		if (dataEvents[0][keys[i]]['time'] == 'Past') {
+			yearsArray.push(dataEvents[0][keys[i]]['year-of-discovery']);
+		}
 	}
 
 	populateTimeline();
@@ -37,19 +41,25 @@ function populateTimeline() {
 	let lineLength;
 	let startingYear = yearsArray[0];
 	parseInt(startingYear);
+
+	// Create data point circles
+
 	for (let i = 1; i < yearsArray.length; i++) {
 		let currentYear = yearsArray[i];
 		parseInt(currentYear);
 
-		let yDistance = (currentYear - startingYear) * 30 + 498.5;
+		let yDistance = (currentYear - startingYear) * 40 + 498.5;
 
 		yDataPointsArray.push(yDistance);
 
 		let cloneDP = dataPoint.cloneNode(true);
 		cloneDP.querySelector('.outer-circle').setAttribute('transform', `matrix(1,0,0,1,918.5,${yDistance})`);
 		cloneDP.querySelector('.inner-circle').setAttribute('transform', `matrix(1,0,0,1,918.5,${yDistance})`);
-		lineLength = (currentYear - startingYear) * 30 + 498.5;
 		parentContainer.appendChild(cloneDP);
+
+		// Calculates total length of SVG
+
+		lineLength = (currentYear - startingYear) * 40 + 498.5;
 	}
 
 	createYearsTimeline();

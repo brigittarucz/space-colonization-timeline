@@ -10,6 +10,54 @@
         font-weight: 500;
       }
       
+            .cls-1, .cls-2, .cls-5 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #fff;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-linejoin: bevel;
+      }
+
+      .cls-3 {
+        fill: rgba(255,255,255,0.32);
+      }
+
+      .cls-4 {
+        stroke: none;
+      }
+
+      .cls-6 {
+        filter: url(#Ellipse_4);
+      }
+
+      .cls-7 {
+        filter: url(#Ellipse_3);
+      }      
+      
+            .cls-7 {
+        filter: url(#Ellipse_3);
+      }
+
+      .cls-8 {
+        filter: url(#Ellipse_2);
+      }
+
+      .cls-9 {
+        filter: url(#Ellipse_1);
+      }
+
+      .cls-10 {
+        filter: url(#Line_1);
+      }
+      
+      
+      
+      
+      
       
       
       
@@ -607,10 +655,38 @@
       <feComposite operator="in" in2="blur-53"/>
       <feComposite in="SourceGraphic"/>
     </filter>
+    <filter id="Ellipse_3" x="20" y="149" width="44" height="44" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur-4"/>
+      <feFlood flood-color="#fff"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_4" x="26" y="155" width="32" height="32" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur-5"/>
+      <feFlood flood-color="#fff"/>
+      <feComposite operator="in" in2="blur-5"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
   </defs>
   <g id="Group_20" data-name="Group 20" transform="translate(-865.5 -2471)">
     <g class="cls-57" transform="matrix(1, 0, 0, 1, 865.5, 2471)">
       <line id="Line_3-2" data-name="Line 3" class="cls-2" x1="159" transform="translate(15 35.5)"/>
+    </g>
+    <g id="future-data-point" data-name="Group 2">
+      <g class="cls-7 outer-circle" transform="matrix(1, 0, 0, 1, 918.5, 2450)">
+        <g id="Ellipse_3-2" data-name="Ellipse 3" class="cls-2" transform="translate(27.5 156.5)">
+          <circle class="cls-4" cx="14.5" cy="14.5" r="14.5"/>
+          <circle class="cls-5" cx="14.5" cy="14.5" r="14"/>
+        </g>
+      </g>
+      <g class="cls-6 inner-circle" transform="matrix(1, 0, 0, 1, 918.5, 2450)">
+        <g id="Ellipse_4-2" data-name="Ellipse 4" class="cls-3" transform="translate(33.5 162.5)">
+          <circle class="cls-4" cx="8.5" cy="8.5" r="8.5"/>
+          <circle class="cls-5" cx="8.5" cy="8.5" r="8"/>
+        </g>
+      </g>
     </g>
     <g id="Repeat_Grid_1" data-name="Repeat Grid 1" class="cls-3" transform="translate(945 2501.5)">
       <g transform="translate(-945 -2514.5)">
