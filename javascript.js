@@ -242,8 +242,20 @@ function showDetails() {
 function positionSVGInfo(dpNo) {
 	let svgBranch = document.querySelector('#three-line-svg');
 	svgBranch.style.marginTop = yTotalDataPointsArray[dpNo] - 435 + 'px';
+	addInfoboxes(dpNo);
 }
 
 // ISSUE - with two very close data points you cannot click on the other one
 // the SVG is over it; modifying the z-index does not work with pos absolute
 // without pos absolute the whole design breaks.
+
+function addInfoboxes(dpNo) {
+	let infoboxes = document.querySelector('.infoboxes');
+	infoboxes.style.display = 'block';
+	let keys = Object.keys(globalDataEvents[0]);
+	infoboxes.querySelector('h2').textContent = globalDataEvents[0][keys[dpNo]]['events'];
+	infoboxes.querySelector('.country-involved').textContent = globalDataEvents[0][keys[dpNo]]['country-organization'];
+	infoboxes.querySelector('.memorable-contributors').textContent =
+		globalDataEvents[0][keys[dpNo]]['memorable-contributors'];
+	infoboxes.style.marginTop = yTotalDataPointsArray[dpNo] - 435 + 'px';
+}

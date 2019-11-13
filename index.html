@@ -13,13 +13,44 @@
   #svg-info {
    z-index: 0;
    position: relative;
-   margin-left: -300px;
+   margin-left: -275px;
+   color: white;
   }
   #timeline-svg {
     z-index: 5;
   }
   #three-line-svg {
+    width: 500px;
     position: absolute;
+  }
+  .infoboxes {
+    position: absolute;
+    display: none;
+  }
+  .infoboxes > * {
+    position: absolute;
+  }
+  .infoboxes h2 {
+    margin-top: 100px;
+    margin-left: -150px;
+    width: 300px;
+    text-transform: capitalize;
+  }
+  .infobox-1 {
+    margin-top: 180px;
+    margin-left: -150px;
+  }
+  .infobox-2 {
+    margin-left: 500px;
+  }
+  .infobox-3 {
+    margin-left: 520px;
+    margin-top: 180px;
+  }
+  .infobox {
+    width: 300px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
   }
 </style>
 <body>
@@ -31,7 +62,21 @@
 
   </section>
   <section id="svg-info">
-
+    <article class="infoboxes"> 
+    <h2> Title of Event </h2>
+    <div class="infobox infobox-1"> 
+    <h3> Memorable Contributors </h3>
+    <p class="memorable-contributors"> Einstein, Darwin </p>
+    </div>
+    <div class="infobox infobox-2">
+    <h3> Country Involved </h3>
+    <p class="country-involved"> USA(NASA) </p>
+    </div>
+    <div class="infobox infobox-3">
+    <h3> Quick Facts </h3>
+    <p class="quick-fact"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, fuga doloremque ab itaque ad sequi? Repudiandae tempor.</p>
+    </div>
+    </article>
   </section>
   <section id="timeline-container">
 
