@@ -1,6 +1,6 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink" width="533" height="303.737" viewBox="0 0 533 303.737">
+  xmlns:xlink="http://www.w3.org/1999/xlink" width="533" height="303.737" viewBox="0 0 533 303.737" id="three-line-svg">
   <defs>
     <style>
       .cls-1lineThree, .cls-3lineThree, .cls-5lineThree {
@@ -90,7 +90,7 @@
       <feComposite in="SourceGraphic"/>
     </filter>
   </defs>
-  <g id="Group_25" data-name="Group 25" transform="translate(-559.5 -565.5)">
+  <g id="line-three-svg" data-name="Group 25" transform="translate(-559.5 -565.5)">
     <g class="cls-1lineThree1" transform="matrix(1, 0, 0, 1, 559.5, 565.5)">
       <g id="Ellipse_lineThree_3-4" data-name="Ellipse 3" class="cls-1lineThree" transform="translate(496.5 192.5)">
         <circle class="cls-4lineThree" cx="14.5" cy="14.5" r="14.5"/>

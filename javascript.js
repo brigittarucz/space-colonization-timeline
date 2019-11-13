@@ -203,16 +203,47 @@ function positionIcons() {
 
 function addEventsDP() {
 	let dataPoints = document.querySelectorAll('.general-data-point');
+	let i = 0;
+	dataPoints.forEach((el) => {
+		el.classList.add('dp-no' + i);
+		i++;
+	});
 	dataPoints.forEach((el) => el.addEventListener('click', showDetails));
 }
 
 let threeBranchLink = './assets/line-three-info.svg';
 
 function showDetails() {
+	// search for any previous instances open
+
+	document.querySelector('#three-line-svg') != undefined
+		? document.querySelector('#three-line-svg').remove()
+		: console.log('ok');
+
 	// getBoundingClientRect gives you relative coords to the whole doc
-	console.log(event.target.getBoundingClientRect());
+	// let coordsClickedObj = event.target.getBoundingClientRect();
+
+	let dpNo = event.target.parentElement.parentElement.parentElement.classList[1];
+	dpNo = dpNo.slice(5);
+
 	fetch(threeBranchLink).then((e) => e.text()).then((svgData) => {
 		let parentContainer = document.querySelector('#svg-info');
 		parentContainer.innerHTML += svgData;
+		positionSVGInfo(dpNo);
 	});
 }
+
+// #line-three-svg id for the group itself
+// #three-line-svg for the whole svg selection
+
+// difference between top-right infobox and line center y = 82 px
+// difference between line center and bottom-left infobox x = 388 px
+
+function positionSVGInfo(dpNo) {
+	let svgBranch = document.querySelector('#three-line-svg');
+	svgBranch.style.marginTop = yTotalDataPointsArray[dpNo] - 435 + 'px';
+}
+
+// ISSUE - with two very close data points you cannot click on the other one
+// the SVG is over it; modifying the z-index does not work with pos absolute
+// without pos absolute the whole design breaks.
