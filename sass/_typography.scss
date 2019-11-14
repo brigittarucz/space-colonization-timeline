@@ -1,0 +1,62 @@
+//IMPORTING FONTS
+@font-face {
+	font-family: "Znikomit";
+	src: url("Znikomit.otf") format("otf");
+}
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,900&display=swap");
+
+//STYLES
+.heading-primary {
+	font-family: Znikomit, sans-serif;
+	color: #fff;
+	font-size: 7.5rem;
+	text-align: center;
+	font-weight: 400;
+
+	text-shadow: 1px 1px 4px #fff, 0 0 1em #fff, 0 0 0.2em #fff;
+	animation: glow 0.6s ease-in-out infinite alternate, float 6s linear infinite alternate;
+
+	max-width: 70rem;
+	margin: auto;
+	margin-top: 10rem;
+
+	will-change: transform;
+
+	&_small {
+		display: block;
+		font-size: 5.5rem;
+	}
+}
+
+.heading-event {
+	font-weight: 500;
+	font-size: 2.5rem;
+}
+
+.heading-box {
+	font-weight: 600;
+	font-size: 2rem;
+}
+
+.text-box {
+	font-weight: 300;
+	font-size: 1.7rem;
+}
+
+.dates {
+	font-weight: 900;
+	font-size: 1.8rem;
+}
+
+//ANIMATIONS
+@keyframes glow {
+	to {
+		text-shadow: 1px 1px 6px #fff, 0 0 1em #fff, 0 0 0.2em #fff;
+	}
+}
+
+@keyframes float {
+	to {
+		transform: translate(1rem, -2rem);
+	}
+}

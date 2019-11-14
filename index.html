@@ -4,88 +4,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title> Space Events Timeline </title>
-  <link rel="stylesheet" type="text/css" href="./css/style-1.css">
+  <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
-<style>
-/* Styling for positioning */
-  body {
-    margin-left: calc(50% - 100px);
-  }
-  #svg-info {
-   z-index: 0;
-   position: relative;
-   margin-left: -275px;
-   color: white;
-  }
-  #timeline-svg {
-    z-index: 5;
-  }
-  #three-line-svg {
-    width: 500px;
-    position: absolute;
-  }
-  .infoboxes {
-    position: absolute;
-    display: none;
-  }
-  .infoboxes > * {
-    position: absolute;
-  }
-  .infoboxes h2 {
-    margin-top: 100px;
-    margin-left: -150px;
-    width: 300px;
-    text-transform: capitalize;
-  }
-  /* Each infobox positioned in an absolute manner */
-  .infobox-1 {
-    margin-top: 180px;
-    margin-left: -150px;
-  }
-  .infobox-2 {
-    margin-left: 500px;
-  }
-  .infobox-3 {
-    margin-left: 520px;
-    margin-top: 180px;
-  }
-  .infobox {
-    width: 300px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-</style>
+
 <body>
-  
-  <section id="years-container">
+  <canvas id="canvas"></canvas>
+  <h1 class="heading-primary">
+    HUMAN JOURNEY COLONIZING SPACE
+  </h1>
+  <div class="center-container"> 
+  <section id="years-container" class="dates">
 
   </section>
   <section id="svg-icons">
 
   </section>
   <section id="svg-info">
-    <!-- The new thing added besides JS is this article in which the data is fetched -->
-    <!-- The style 1 has modified one element which is put in comments, it can be deleted -->
     <article class="infoboxes"> 
-    <h2> Title of Event </h2>
+    <h2 class="heading-event"> Title of Event </h2>
     <div class="infobox infobox-1"> 
-    <h3> Memorable Contributors </h3>
-    <p class="memorable-contributors"> Einstein, Darwin </p>
+    <h3 class="heading-box"> Memorable Contributors </h3>
+    <p class="memorable-contributors text-box"> Einstein, Darwin </p>
     </div>
     <div class="infobox infobox-2">
-    <h3> Country Involved </h3>
-    <p class="country-involved"> USA(NASA) </p>
+    <h3 class="heading-box"> Country Involved </h3>
+    <p class="country-involved text-box"> USA(NASA) </p>
     </div>
     <div class="infobox infobox-3">
-    <h3> Quick Facts </h3>
-    <p class="quick-fact"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, fuga doloremque ab itaque ad sequi? Repudiandae tempor.</p>
+    <h3 class="heading-box"> Quick Facts </h3>
+    <p class="quick-fact text-box"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, fuga doloremque ab itaque ad sequi? Repudiandae tempor.</p>
     </div>
     </article>
   </section>
   <section id="timeline-container">
 
   </section>
+  </div>
   <img src="assets/colonizedPlanet.png" alt="Colonized Planet" class="colonized-planet"> 
+  <h1 class="heading-primary">
+    HUMANS <span class="heading-primary_small">=</span> MARTIANS
+  </h1>
+
+  <script src="./background.js"></script>
   <script src="./javascript.js"> </script>
 </body>
 </html>

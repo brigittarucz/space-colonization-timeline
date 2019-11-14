@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,900&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  background: #000;
+  font-family: Roboto, sans-serif;
+  color: #b1b0b2; }
+
+@font-face {
+  font-family: "Znikomit";
+  src: url("Znikomit.otf") format("otf"); }
+
+.heading-primary {
+  font-family: Znikomit, sans-serif;
+  color: #fff;
+  font-size: 7.5rem;
+  text-align: center;
+  font-weight: 400;
+  text-shadow: 1px 1px 4px #fff, 0 0 1em #fff, 0 0 0.2em #fff;
+  animation: glow 0.6s ease-in-out infinite alternate, float 6s linear infinite alternate;
+  max-width: 70rem;
+  margin: auto;
+  margin-top: 10rem;
+  will-change: transform; }
+  .heading-primary_small {
+    display: block;
+    font-size: 5.5rem; }
+
+.heading-event {
+  font-weight: 500;
+  font-size: 2.5rem; }
+
+.heading-box {
+  font-weight: 600;
+  font-size: 2rem; }
+
+.text-box {
+  font-weight: 300;
+  font-size: 1.7rem; }
+
+.dates {
+  font-weight: 900;
+  font-size: 1.8rem; }
+
+@keyframes glow {
+  to {
+    text-shadow: 1px 1px 6px #fff, 0 0 1em #fff, 0 0 0.2em #fff; } }
+
+@keyframes float {
+  to {
+    transform: translate(1rem, -2rem); } }
+
+svg {
+  display: block; }
+
+.yearParagraph {
+  position: absolute; }
+
+.colonized-planet {
+  width: 189px;
+  padding: 20px;
+  margin-left: calc(50% - 100px); }
+
+#timeline-svg {
+  z-index: 5; }
+
+/* Styling for positioning */
+.center-container {
+  margin-left: calc(50% - 100px); }
+  .center-container #years-container {
+    position: absolute;
+    margin-top: -335px; }
+  .center-container #svg-icons {
+    position: absolute;
+    margin-left: 150px;
+    margin-top: -355px; }
+  .center-container img {
+    position: absolute;
+    width: 100px; }
+
+/* Each infobox positioned in an absolute manner */
+#svg-info {
+  z-index: 0;
+  position: relative;
+  margin-left: -275px;
+  color: white; }
+  #svg-info #three-line-svg {
+    width: 500px;
+    position: absolute; }
+  #svg-info .infoboxes {
+    position: absolute;
+    display: none; }
+    #svg-info .infoboxes h2 {
+      margin-top: 100px;
+      margin-left: -150px;
+      width: 300px;
+      text-transform: capitalize; }
+    #svg-info .infoboxes > * {
+      position: absolute; }
+    #svg-info .infoboxes .infobox {
+      width: 300px;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.2); }
+    #svg-info .infoboxes .infobox-1 {
+      margin-top: 180px;
+      margin-left: -150px; }
+    #svg-info .infoboxes .infobox-2 {
+      margin-left: 500px; }
+    #svg-info .infoboxes .infobox-3 {
+      margin-left: 520px;
+      margin-top: 180px; }
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1; }
