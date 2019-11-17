@@ -76,44 +76,6 @@ function populateTimeline() {
 	positionFallingStar();
 }
 
-// Using throttle from underscore.js
-
-let _ = require('underscore');
-
-function positionFallingStar() {
-	document.querySelector("body").addEventListener("scroll", _.throttle(function() {
-		console.log("hello");
-	}), 100);
-}
-
-// Intersection Observer for falling star
-// First, you create an Observer with some options.
-// Then, you ask the Observer to start observing a target.
-// When the desired intersection happens, your callback function is called.
-
-// function createIntersectionObserver() {
-// 	let options = {
-// 		root: document.querySelector('#parent-container'),
-// 		rootMargin: '0px',
-// 		threshold: 1.0
-// 	};
-
-// 	let observer = new IntersectionObserver(callbackFunction, options);
-
-// 	let datapoints = document.querySelectorAll('.general-data-point');
-// 	datapoints.forEach((el) => observer.observe(el));
-
-// 	function callbackFunction() {
-// 		alert('works');
-// 	}
-// }
-
-// Rules of Thumb
-// The API is asynchronous, so use the callback function to do something when the intersection happens.
-// The root element can be decided using the CSS selector.
-// If you specify root: document.querySelector(‘null’), the current viewport of the user will be the root element.
-// Play around with threshold and rootMargin to get the exact behavior you are expecting.
-
 function createYearsTimeline() {
 	let yearsContainer = document.querySelector('#years-container');
 	totalYearsArray = yearsArray.concat(futureYearsArray);
