@@ -186,7 +186,7 @@ function addIconsTimeline() {
 	let lengthObject = keys.length;
 	for (let i = 0; i < lengthObject; i++) {
 		let img = document.createElement('img');
-		img.src = `./assets/${globalDataEvents[0][keys[i]]['image-link']}.png`;
+		img.src = `./assets/svg-icons/${globalDataEvents[0][keys[i]]['image-link']}.svg`;
 		img.setAttribute('class', 'svg-icon');
 		parentContainer.appendChild(img);
 	}
