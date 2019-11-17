@@ -75,31 +75,38 @@ function populateTimeline() {
 	generateTimeline(lineLength);
 }
 
-// Using throttle from lodash
+// q: to run an npm package like lodash, underscore you are required
+// to use parcel for them which makes some magic in the bg.
+// if you upload them on github is it necessary to make your
+// whole code go through something else in order for everything
+// to fit or you can upload it just like that.
 
+// Using throttle from underscore
 
+function moveFallingStar() {
 
-// Intersection Observer for falling star
-// First, you create an Observer with some options.
-// Then, you ask the Observer to start observing a target.
-// When the desired intersection happens, your callback function is called.
+window.addEventListener("scroll", _.throttle(changePosition, 100));
+let body = document.querySelector("body");
+let fallingStar = document.querySelector(".fallingStar");	
 
-// function createIntersectionObserver() {
-// 	let options = {
-// 		root: document.querySelector('#parent-container'),
-// 		rootMargin: '0px',
-// 		threshold: 1.0
-// 	};
+function changePosition() {
 
-// 	let observer = new IntersectionObserver(callbackFunction, options);
+	// https://stackoverflow.com/questions/8584902/get-closest-number-out-of-array
 
-// 	let datapoints = document.querySelectorAll('.general-data-point');
-// 	datapoints.forEach((el) => observer.observe(el));
+	let goal = body.scrollTop;
+	let closest = yTotalDataPointsArray.reduce(function(prev, curr) {
+		return (Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev);
+	});
 
-// 	function callbackFunction() {
-// 		alert('works');
-// 	}
-// }
+	setStarPosition(closest, fallingStar);
+}
+}
+
+function setStarPosition(closest, fallingStar) {
+	fallingStar.setAttribute("transform", "matrix(1,0,0,1,918.5," + ( closest + 130 ) + ")");
+	console.log(fallingStar);
+	// ISSUE: Does not set itself?
+}
 
 function createYearsTimeline() {
 	let yearsContainer = document.querySelector('#years-container');
@@ -132,6 +139,8 @@ function positionYearsTimeline() {
 	for (let i = 0; i < yTotalDataPointsArray.length; i++) {
 		yearsParagraphsArray[i].style.marginTop = yTotalDataPointsArray[i] + 'px';
 	}
+
+	moveFallingStar();
 }
 
 function generateTimeline(lineLength) {
@@ -238,7 +247,7 @@ function addEventsDP() {
 	dataPoints.forEach((el) => el.addEventListener('click', showDetails));
 }
 
-let threeBranchLink = './assets/line-three-info.svg';
+let threeBranchLink = './assets/NEWconstelation.svg';
 
 function showDetails() {
 	// search for any previous instances open
