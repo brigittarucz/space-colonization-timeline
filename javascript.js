@@ -1,5 +1,5 @@
 let timelineContainer = document.querySelector('#timeline-container');
-let timelineSVGLink = './assets/timeline.svg';
+let timelineSVGLink = './assets/NEWtimeline.svg';
 
 fetch(timelineSVGLink).then((e) => e.text()).then((svgData) => appendSvgData(svgData));
 
@@ -12,6 +12,7 @@ function appendSvgData(svgData) {
 // #start-point for the bigger circle ( ellipse 1 + ellipse 2)
 // #data-point for the smaller circle ( ellipse 3 + ellipse 4)
 // #timeline-svg for the timeline svg
+// .fallingStar for moving star circle
 
 let dataPointsLink = './data-points.json';
 let yearsArray = [];
@@ -73,6 +74,32 @@ function populateTimeline() {
 	console.log(lineLength);
 	generateTimeline(lineLength);
 }
+
+// Using throttle from lodash
+
+
+
+// Intersection Observer for falling star
+// First, you create an Observer with some options.
+// Then, you ask the Observer to start observing a target.
+// When the desired intersection happens, your callback function is called.
+
+// function createIntersectionObserver() {
+// 	let options = {
+// 		root: document.querySelector('#parent-container'),
+// 		rootMargin: '0px',
+// 		threshold: 1.0
+// 	};
+
+// 	let observer = new IntersectionObserver(callbackFunction, options);
+
+// 	let datapoints = document.querySelectorAll('.general-data-point');
+// 	datapoints.forEach((el) => observer.observe(el));
+
+// 	function callbackFunction() {
+// 		alert('works');
+// 	}
+// }
 
 function createYearsTimeline() {
 	let yearsContainer = document.querySelector('#years-container');
