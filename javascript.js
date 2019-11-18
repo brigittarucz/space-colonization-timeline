@@ -1,3 +1,5 @@
+// import { getHeapSpaceStatistics } from "v8";
+
 let timelineContainer = document.querySelector('#timeline-container');
 let timelineSVGLink = './assets/NEWtimeline.svg';
 
@@ -255,9 +257,20 @@ function addInfoboxes(dpNo) {
 	let infoboxes = document.querySelector('.infoboxes');
 	infoboxes.style.display = 'block';
 	let keys = Object.keys(globalDataEvents[0]);
-	infoboxes.querySelector('h2').textContent = globalDataEvents[0][keys[dpNo]]['events'];
+	let titleEvent = globalDataEvents[0][keys[dpNo]]['events'];
+	let spanLetters = "";
+	console.log(titleEvent);
+	for(let i = 0; i < titleEvent.length; i++) {
+		if(titleEvent[i] != " ") { 
+		spanLetters += `<span> ${titleEvent[i]} </span>`;
+		} else {
+		spanLetters += " ";
+		}
+	}
+	infoboxes.querySelector('h2').innerHTML = spanLetters;
 	infoboxes.querySelector('.country-involved').textContent = globalDataEvents[0][keys[dpNo]]['country-organization'];
 	infoboxes.querySelector('.memorable-contributors').textContent =
 		globalDataEvents[0][keys[dpNo]]['memorable-contributors'];
 	infoboxes.style.marginTop = yTotalDataPointsArray[dpNo] - 435 + 'px';
 }
+
