@@ -88,6 +88,7 @@ Stars.prototype.animate = function(star) {
     for (var i = 0; i < self.numStars; i++) {
       star[i].yPos -= star[i].yVelocity;
       //if star goes off screen from the left call reset method
+
       if (star[i].yPos < 0) {
         self.resetStar(star, i);
       } else {
@@ -99,9 +100,10 @@ Stars.prototype.animate = function(star) {
 
 // reset the star xPos with a randon YPos
 Stars.prototype.resetStar = function(star, i) {
+  console.log("yes");
   var self = this;
-  star[i].xPos += canvas.width + star[i].radius;
-  star[i].yPos = self._rand(0, canvas.height);
+  star[i].yPos += canvas.height + star[i].radius;
+  star[i].xPos = self._rand(0, canvas.width);
   self.draw(star, i);
 };
 
