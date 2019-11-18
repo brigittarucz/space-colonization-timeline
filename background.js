@@ -1,6 +1,8 @@
+let initColor = "#fff";
+
 function Stars() {
   //stars properties
-  this.color = "#fff";
+  this.color = initColor;
   this.minRadius = 0.5;
   this.maxRadius = 1;
   this.minSpeed = 0.05;
@@ -72,7 +74,16 @@ Stars.prototype.animate = function(star) {
 
   setInterval(function() {
     //clears canvas
-    self.clearCanvas();
+    let Yval;
+    window.addEventListener("scroll", e => {
+      Yval = Math.round(window.scrollY);
+    });
+    //console.log(hyperjump);
+    if (!hyperjump) {
+      initColor = "#fff";
+      self.clearCanvas();
+    }
+    initColor = "#f00";
     //redraws stars
     for (var i = 0; i < self.numStars; i++) {
       star[i].yPos -= star[i].yVelocity;

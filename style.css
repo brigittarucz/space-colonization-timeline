@@ -7,7 +7,8 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
 
 body {
   box-sizing: border-box;
@@ -101,7 +102,8 @@ svg {
   color: white; }
   #svg-info #three-line-svg {
     width: 500px;
-    position: absolute; }
+    position: absolute;
+    pointer-events: none; }
   #svg-info .infoboxes {
     position: absolute;
     display: none; }

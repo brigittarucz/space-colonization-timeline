@@ -1,89 +1,90 @@
 svg {
-	display: block;
+  display: block;
 }
 
 .yearParagraph {
-	position: absolute;
+  position: absolute;
 }
 
 .colonized-planet {
-	width: 189px;
-	padding: 20px;
-	margin-left: calc(50% - 100px);
+  width: 189px;
+  padding: 20px;
+  margin-left: calc(50% - 100px);
 }
 
 #timeline-svg {
-	z-index: 5;
+  z-index: 5;
 }
 
 /* Styling for positioning */
 
 .center-container {
-	margin-left: calc(50% - 100px);
+  margin-left: calc(50% - 100px);
 
-	#years-container {
-		position: absolute;
-		margin-top: -335px;
-	}
+  #years-container {
+    position: absolute;
+    margin-top: -335px;
+  }
 
-	#svg-icons {
-		position: absolute;
-		margin-left: 150px;
-		margin-top: -355px;
-	}
+  #svg-icons {
+    position: absolute;
+    margin-left: 150px;
+    margin-top: -355px;
+  }
 
-	img {
-		position: absolute;
-		width: 100px;
-	}
+  img {
+    position: absolute;
+    width: 100px;
+  }
 }
 
 /* Each infobox positioned in an absolute manner */
 
 #svg-info {
-	z-index: 0;
-	position: relative;
-	margin-left: -275px;
-	color: white;
+  z-index: 0;
+  position: relative;
+  margin-left: -275px;
+  color: white;
 
-	#three-line-svg {
-		width: 500px;
-		position: absolute;
-	}
+  #three-line-svg {
+    width: 500px;
+    position: absolute;
+    pointer-events: none;
+  }
 
-	.infoboxes {
-		position: absolute;
-		display: none;
+  .infoboxes {
+    position: absolute;
+    display: none;
 
-		h2 {
-			margin-top: 100px;
-			margin-left: -150px;
-			width: 300px;
-			text-transform: capitalize;
-		}
+    h2 {
+      margin-top: 100px;
+      margin-left: -150px;
+      width: 300px;
+      text-transform: capitalize;
+    }
 
-		& > * {
-			position: absolute;
-		}
+    & > * {
+      position: absolute;
+    }
 
-		.infobox {
-			width: 300px;
-			padding: 10px;
-			background-color: rgba(255, 255, 255, 0.2);
-		}
+    .infobox {
+      width: 300px;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
 
-		.infobox-1 {
-			margin-top: 180px;
-			margin-left: -150px;
-		}
+    .infobox-1 {
+      margin-top: 180px;
+      margin-left: -150px;
+    }
 
-		.infobox-2 {
-			margin-left: 500px;
-		}
+    .infobox-2 {
+      margin-left: 500px;
+    }
 
-		.infobox-3 {
-			margin-left: 520px;
-			margin-top: 180px;
-		}
-	}
+    .infobox-3 {
+      margin-left: 520px;
+      margin-top: 180px;
+    }
+  }
 }

@@ -1,6 +1,8 @@
 let timelineContainer = document.querySelector("#timeline-container");
 let timelineSVGLink = "./assets/NEWtimeline.svg";
 
+let hyperjump = false;
+
 fetch(timelineSVGLink)
   .then(e => e.text())
   .then(svgData => appendSvgData(svgData));
@@ -24,6 +26,7 @@ let yDataPointsArray = [450];
 let yFutureDataPointsArray = [2450];
 let yTotalDataPointsArray = [];
 let globalDataEvents = [];
+let bigGaps = [];
 
 fetch(dataPointsLink)
   .then(e => e.json())
@@ -142,6 +145,8 @@ function positionYearsTimeline() {
   yTotalDataPointsArray = yDataPointsArray.concat(yFutureDataPointsArray);
 
   console.log(yTotalDataPointsArray);
+
+  findBigGaps();
 
   for (let i = 0; i < yTotalDataPointsArray.length; i++) {
     yearsParagraphsArray[i].style.marginTop = yTotalDataPointsArray[i] + "px";
@@ -317,3 +322,33 @@ function addInfoboxes(dpNo) {
     globalDataEvents[0][keys[dpNo]]["memorable-contributors"];
   infoboxes.style.marginTop = yTotalDataPointsArray[dpNo] - 435 + "px";
 }
+
+function findBigGaps() {
+  for (let i = 0; i <= yTotalDataPointsArray.length; i++) {
+    let gap = yTotalDataPointsArray[i + 1] - yTotalDataPointsArray[i];
+    if (gap >= 2000) {
+      bigGaps.push({
+        startPoint: yTotalDataPointsArray[i],
+        endPoint: yTotalDataPointsArray[i + 1]
+      });
+    }
+  }
+  console.log(bigGaps);
+}
+
+window.addEventListener("scroll", e => {
+  let scroller = Math.round(window.scrollY);
+  //console.log(scroller);
+  for (let i = 0; i < bigGaps.length; i++) {
+    if (
+      scroller > bigGaps[i].startPoint &&
+      scroller < bigGaps[i].startPoint + 20
+    ) {
+      window.scrollTo(0, bigGaps[i].endPoint);
+      hyperjump = true;
+      setTimeout(() => {
+        hyperjump = false;
+      }, 1200);
+    }
+  }
+});
