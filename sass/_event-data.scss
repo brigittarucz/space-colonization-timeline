@@ -30,11 +30,13 @@ svg {
     position: absolute;
     margin-left: 150px;
     margin-top: -355px;
+    animation: float 6s linear infinite alternate;
   }
 
   img {
     position: absolute;
-    width: 100px;
+    width: 35rem;
+    top: -11rem;
   }
 }
 
@@ -50,6 +52,8 @@ svg {
     width: 430px;
     position: absolute;
     pointer-events: none;
+    // DISPLAY NONE TEMPORARY
+    display: none;
   }
 
   .infoboxes {
@@ -57,9 +61,9 @@ svg {
     display: none;
 
     h2 {
-      margin-top: 100px;
-      margin-left: -150px;
-      width: 300px;
+      margin-top: 5px;
+      margin-left: 10rem;
+      width: 40rem;
       text-transform: capitalize;
     }
 
@@ -70,7 +74,9 @@ svg {
     .infobox {
       width: 300px;
       padding: 10px;
-      background-color: rgba(255, 255, 255, 0.2);
+
+      animation: glow 4s ease-in-out infinite alternate,
+        float 6s linear infinite alternate;
     }
 
     .infobox-1 {

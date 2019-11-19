@@ -166,7 +166,7 @@
                 cx="14.5"
                 cy="14.5"
                 r="10"
-                fill="#fff"
+                fill="#9b2b2a"
                 filter="url(#blurMe)"
               />
               <circle class="cls-5" cx="14.5" cy="14.5" r="14" />

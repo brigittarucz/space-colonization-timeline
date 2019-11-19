@@ -27,7 +27,7 @@ body {
   text-align: center;
   font-weight: 400;
   text-shadow: 1px 1px 4px #fff, 0 0 1em #fff, 0 0 0.2em #fff;
-  animation: glow 0.6s ease-in-out infinite alternate, float 6s linear infinite alternate;
+  animation: glow 0.6s ease-in-out infinite alternate, float 6s linear infinite alternate;
   max-width: 70rem;
   margin: auto;
   margin-top: 10rem;
@@ -38,15 +38,26 @@ body {
 
 .heading-event {
   font-weight: 500;
-  font-size: 2.5rem; }
+  font-size: 3rem;
+  color: #fff; }
 
 .heading-box {
+  display: block;
   font-weight: 600;
-  font-size: 2rem; }
+  font-size: 2.5rem;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 1px 1px 4px #fff, 0 0 1em #fff, 0 0 0.2em #fff; }
 
 .text-box {
-  font-weight: 300;
-  font-size: 1.7rem; }
+  font-weight: 500;
+  font-size: 1.7rem;
+  color: #000;
+  margin: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  text-shadow: 1px 1px 4px #fff, 0 0 1em #fff, 0 0 0.2em #fff; }
 
 .song-information {
   font-size: 1.5rem;
@@ -65,6 +76,12 @@ body {
 @keyframes float {
   to {
     transform: translate(1rem, -2rem); } }
+
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff1177, 0 0 70px #ff1177, 0 0 80px #ff1177, 0 0 100px #ff1177, 0 0 150px #ff1177; }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177, 0 0 35px #ff1177, 0 0 40px #ff1177, 0 0 50px #ff1177, 0 0 75px #ff1177; } }
 
 svg {
   display: block; }
@@ -89,10 +106,12 @@ svg {
   .center-container #svg-icons {
     position: absolute;
     margin-left: 150px;
-    margin-top: -355px; }
+    margin-top: -355px;
+    animation: float 6s linear infinite alternate; }
   .center-container img {
     position: absolute;
-    width: 100px; }
+    width: 35rem;
+    top: -11rem; }
 
 /* Each infobox positioned in an absolute manner */
 #svg-info {
@@ -103,21 +122,22 @@ svg {
   #svg-info #three-line-svg {
     width: 430px;
     position: absolute;
-    pointer-events: none; }
+    pointer-events: none;
+    display: none; }
   #svg-info .infoboxes {
     position: absolute;
     display: none; }
     #svg-info .infoboxes h2 {
-      margin-top: 100px;
-      margin-left: -150px;
-      width: 300px;
+      margin-top: 5px;
+      margin-left: 10rem;
+      width: 40rem;
       text-transform: capitalize; }
     #svg-info .infoboxes > * {
       position: absolute; }
     #svg-info .infoboxes .infobox {
       width: 300px;
       padding: 10px;
-      background-color: rgba(255, 255, 255, 0.2); }
+      animation: glow 4s ease-in-out infinite alternate, float 6s linear infinite alternate; }
     #svg-info .infoboxes .infobox-1 {
       margin-top: 180px;
       margin-left: -150px; }
@@ -140,22 +160,27 @@ canvas {
   perspective: 1000px;
   opacity: 0;
   animation: animateRotation 2.5s forwards;
-  color: transparent;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  text-transform: lowercase; }
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  text-transform: uppercase; }
 
 @keyframes animateRotation {
   0% {
     transform: rotateY(-70deg) translateZ(-160px);
-    text-shadow: 0 0 50px #fff;
+    text-shadow: 0 0 50px #9b2b2a;
     letter-spacing: 10px; }
   50% {
-    text-shadow: 0 0 10px #fff;
+    text-shadow: 0 0 10px #9b2b2a;
     transform: translateY(-30deg);
-    text-shadow: 0 0 5px #fff;
+    text-shadow: 0 0 5px #9b2b2a;
     letter-spacing: 0px; }
   100% {
-    text-shadow: 0 0 1px #fff;
+    text-shadow: 1px 1px 4px #9b2b2a, 0 0 1em #9b2b2a, 0 0 0.2em #9b2b2a;
     transform: rotateY(0) translateZ(0);
     letter-spacing: 0px;
     opacity: 1; } }
+
+img.svg-icon:nth-child(odd) {
+  right: 19rem; }
+
+.heading-event {
+  text-transform: capitalize; }

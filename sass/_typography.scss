@@ -31,17 +31,28 @@
 
 .heading-event {
   font-weight: 500;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  color: #fff;
 }
 
 .heading-box {
+  display: block;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 1px 1px 4px #fff, 0 0 1em #fff, 0 0 0.2em #fff;
 }
 
 .text-box {
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1.7rem;
+  color: #000;
+  margin: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  text-shadow: 1px 1px 4px #fff, 0 0 1em #fff, 0 0 0.2em #fff;
 }
 
 .song-information {
@@ -66,5 +77,16 @@
 @keyframes float {
   to {
     transform: translate(1rem, -2rem);
+  }
+}
+
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff1177,
+      0 0 70px #ff1177, 0 0 80px #ff1177, 0 0 100px #ff1177, 0 0 150px #ff1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177,
+      0 0 35px #ff1177, 0 0 40px #ff1177, 0 0 50px #ff1177, 0 0 75px #ff1177;
   }
 }
