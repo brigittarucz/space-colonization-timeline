@@ -1,52 +1,53 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title> Space Events Timeline </title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Space Events Timeline</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
 
-<body>
-  <canvas id="canvas"></canvas>
-  <h1 class="heading-primary">
-    HUMAN JOURNEY COLONIZING SPACE
-  </h1>
-  <div class="center-container"> 
-  <section id="years-container" class="dates">
-
-  </section>
-  <section id="svg-icons">
-
-  </section>
-  <section id="svg-info">
-    <article class="infoboxes"> 
-    <h2 class="heading-event"> Title of Event </h2>
-    <div class="infobox infobox-1"> 
-    <h3 class="heading-box"> Memorable Contributors </h3>
-    <p class="memorable-contributors text-box"> Einstein, Darwin </p>
+  <body>
+    <canvas id="canvas"></canvas>
+    <h1 class="heading-primary">
+      HUMAN JOURNEY COLONIZING SPACE
+    </h1>
+    <div class="center-container">
+      <section id="years-container" class="dates"></section>
+      <section id="svg-icons"></section>
+      <section id="svg-info">
+        <article class="infoboxes">
+          <h2 class="heading-event">Title of Event</h2>
+          <div class="infobox infobox-1">
+            <h3 class="heading-box">Memorable Contributors</h3>
+            <p class="memorable-contributors text-box">Einstein, Darwin</p>
+          </div>
+          <div class="infobox infobox-2">
+            <h3 class="heading-box">Country Involved</h3>
+            <p class="country-involved text-box">USA(NASA)</p>
+          </div>
+          <div class="infobox infobox-3">
+            <h3 class="heading-box">Quick Facts</h3>
+            <p class="quick-fact text-box">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, fuga
+              doloremque ab itaque ad sequi? Repudiandae tempor.
+            </p>
+          </div>
+        </article>
+      </section>
+      <section id="timeline-container"></section>
     </div>
-    <div class="infobox infobox-2">
-    <h3 class="heading-box"> Country Involved </h3>
-    <p class="country-involved text-box"> USA(NASA) </p>
-    </div>
-    <div class="infobox infobox-3">
-    <h3 class="heading-box"> Quick Facts </h3>
-    <p class="quick-fact text-box"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, fuga doloremque ab itaque ad sequi? Repudiandae tempor.</p>
-    </div>
-    </article>
-  </section>
-  <section id="timeline-container">
+    <img
+      src="assets/colonizedPlanet.png"
+      alt="Colonized Planet"
+      class="colonized-planet"
+    />
+    <h1 class="heading-primary">
+      HUMANS <span class="heading-primary_small">=</span> MARTIANS
+    </h1>
 
-  </section>
-  </div>
-  <img src="assets/colonizedPlanet.png" alt="Colonized Planet" class="colonized-planet"> 
-  <h1 class="heading-primary">
-    HUMANS <span class="heading-primary_small">=</span> MARTIANS
-  </h1>
-
-  <script src="./lib/gsap.min.js"> </script>
-  <script src="./background.js"></script>
-  <script src="./javascript.js"> </script>
-</body>
+    <script src="./lib/gsap.min.js"></script>
+    <script src="./background.js"></script>
+    <script src="./javascript.js"></script>
+  </body>
 </html>
