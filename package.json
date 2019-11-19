@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.12.0"
+    "cssnano": "^4.1.10",
+    "node-sass": "^4.12.0",
+    "underscore": "^1.9.1"
   },
   "dependencies": {}
 }

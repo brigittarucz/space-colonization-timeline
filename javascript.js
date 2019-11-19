@@ -114,8 +114,6 @@ function setStarPosition(closest) {
   document
     .querySelector(".fallingStar")
     .setAttribute("transform", "matrix(1,0,0,1,918.5," + (closest + 130) + ")");
-
-  //console.log(document.querySelector(".fallingStar"));
 }
 
 function createYearsTimeline() {
@@ -242,7 +240,9 @@ function addIconsTimeline() {
   let lengthObject = keys.length;
   for (let i = 0; i < lengthObject; i++) {
     let img = document.createElement("img");
-    img.src = `./assets/${globalDataEvents[0][keys[i]]["image-link"]}.png`;
+    img.src = `./assets/svg-icons/${
+      globalDataEvents[0][keys[i]]["image-link"]
+    }.svg`;
     img.setAttribute("class", "svg-icon");
     parentContainer.appendChild(img);
   }
@@ -269,7 +269,7 @@ function addEventsDP() {
   dataPoints.forEach(el => el.addEventListener("click", showDetails));
 }
 
-let threeBranchLink = "./assets/NEWconstelation.svg";
+let threeBranchLink = "./assets/NEWESTconstelation.svg";
 
 function showDetails() {
   // search for any previous instances open
@@ -302,20 +302,25 @@ function showDetails() {
 
 function positionSVGInfo(dpNo) {
   let svgBranch = document.querySelector("#three-line-svg");
-  svgBranch.style.marginTop = yTotalDataPointsArray[dpNo] - 435 + "px";
+  svgBranch.style.marginTop = yTotalDataPointsArray[dpNo] - 545 + "px";
   addInfoboxes(dpNo);
 }
-
-// ISSUE - with two very close data points you cannot click on the other one
-// the SVG is over it; modifying the z-index does not work with pos absolute
-// without pos absolute the whole design breaks.
 
 function addInfoboxes(dpNo) {
   let infoboxes = document.querySelector(".infoboxes");
   infoboxes.style.display = "block";
   let keys = Object.keys(globalDataEvents[0]);
-  infoboxes.querySelector("h2").textContent =
-    globalDataEvents[0][keys[dpNo]]["events"];
+  let titleEvent = globalDataEvents[0][keys[dpNo]]["events"];
+  let spanLetters = "";
+  console.log(titleEvent);
+  for (let i = 0; i < titleEvent.length; i++) {
+    if (titleEvent[i] != " ") {
+      spanLetters += `<span> ${titleEvent[i]} </span>`;
+    } else {
+      spanLetters += " ";
+    }
+  }
+  infoboxes.querySelector("h2").innerHTML = spanLetters;
   infoboxes.querySelector(".country-involved").textContent =
     globalDataEvents[0][keys[dpNo]]["country-organization"];
   infoboxes.querySelector(".memorable-contributors").textContent =

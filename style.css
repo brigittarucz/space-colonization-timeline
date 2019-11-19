@@ -27,7 +27,7 @@ body {
   text-align: center;
   font-weight: 400;
   text-shadow: 1px 1px 4px #fff, 0 0 1em #fff, 0 0 0.2em #fff;
-  animation: glow 0.6s ease-in-out infinite alternate, float 6s linear infinite alternate;
+  animation: glow 0.6s ease-in-out infinite alternate, float 6s linear infinite alternate;
   max-width: 70rem;
   margin: auto;
   margin-top: 10rem;
@@ -98,10 +98,10 @@ svg {
 #svg-info {
   z-index: 0;
   position: relative;
-  margin-left: -275px;
+  margin-left: -195px;
   color: white; }
   #svg-info #three-line-svg {
-    width: 500px;
+    width: 430px;
     position: absolute;
     pointer-events: none; }
   #svg-info .infoboxes {
@@ -132,3 +132,30 @@ canvas {
   top: 0;
   left: 0;
   z-index: -1; }
+
+.heading-event > * {
+  display: inline-block;
+  transform: translate3d(0, 0, 0);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  opacity: 0;
+  animation: animateRotation 2.5s forwards;
+  color: transparent;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  text-transform: lowercase; }
+
+@keyframes animateRotation {
+  0% {
+    transform: rotateY(-70deg) translateZ(-160px);
+    text-shadow: 0 0 50px #fff;
+    letter-spacing: 10px; }
+  50% {
+    text-shadow: 0 0 10px #fff;
+    transform: translateY(-30deg);
+    text-shadow: 0 0 5px #fff;
+    letter-spacing: 0px; }
+  100% {
+    text-shadow: 0 0 1px #fff;
+    transform: rotateY(0) translateZ(0);
+    letter-spacing: 0px;
+    opacity: 1; } }
