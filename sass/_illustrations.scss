@@ -1,0 +1,16 @@
+// #svg-icons {
+//   .svg-icons {
+//     width: 22rem !important;
+//     &:nth-child(odd) {
+//       right: 0 !important;
+//     }
+//   }
+// }
+
+img.svg-icon:nth-child(odd) {
+  right: 19rem;
+}
+
+.heading-event {
+  text-transform: capitalize;
+}
