@@ -342,18 +342,28 @@ function findBigGaps() {
 }
 
 window.addEventListener("scroll", e => {
+  console.clear();
   let scroller = Math.round(window.scrollY);
-  //console.log(scroller);
+
+  let shown = false;
   for (let i = 0; i < bigGaps.length; i++) {
-    if (
-      scroller > bigGaps[i].startPoint &&
-      scroller < bigGaps[i].startPoint + 20
-    ) {
-      window.scrollTo(0, bigGaps[i].endPoint);
-      hyperjump = true;
-      setTimeout(() => {
-        hyperjump = false;
-      }, 1200);
+    const gap = bigGaps[i];
+    if (scroller > gap.startPoint && scroller < gap.endPoint - 900) {
+      shown = true;
+      document.querySelector("#start").addEventListener("click", e => {
+        window.scrollTo(0, gap.endPoint);
+        hyperjump = true;
+        setTimeout(() => {
+          hyperjump = false;
+        }, 1200);
+      });
     }
+  }
+  if (shown) {
+    document.querySelector("#start").style.visibility = "visible";
+    document.querySelector("#start").style.opacity = 1;
+  } else {
+    document.querySelector("#start").style.opacity = 0;
+    document.querySelector("#start").style.visibility = "hidden";
   }
 });

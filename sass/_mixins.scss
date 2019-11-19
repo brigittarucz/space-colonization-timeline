@@ -1,0 +1,34 @@
+#start {
+  position: fixed;
+  width: 150px;
+  cursor: pointer;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2;
+  g {
+    circle {
+      stroke: #fff;
+      transition: all 0.5s;
+    }
+    path {
+      fill: #fff;
+      transition: all 0.5s;
+    }
+  }
+  &:hover {
+    &,
+    g {
+      circle {
+        stroke: #0cbfe9;
+        fill: transparent;
+      }
+      path {
+        stroke: transparent;
+        fill: #0cbfe9;
+      }
+    }
+  }
+}
