@@ -75,7 +75,7 @@ function populateTimeline() {
 
 	console.log(lineLength);
 	generateTimeline(lineLength);
-	positionFallingStar();
+	// positionFallingStar();
 }
 
 function createYearsTimeline() {
@@ -215,7 +215,7 @@ function addEventsDP() {
 	dataPoints.forEach((el) => el.addEventListener('click', showDetails));
 }
 
-let threeBranchLink = './assets/line-three-info.svg';
+let threeBranchLink = './assets/NEWESTconstelation.svg';
 
 function showDetails() {
 	// search for any previous instances open
@@ -245,7 +245,7 @@ function showDetails() {
 
 function positionSVGInfo(dpNo) {
 	let svgBranch = document.querySelector('#three-line-svg');
-	svgBranch.style.marginTop = yTotalDataPointsArray[dpNo] - 435 + 'px';
+	svgBranch.style.marginTop = yTotalDataPointsArray[dpNo] - 545 + 'px';
 	addInfoboxes(dpNo);
 }
 
