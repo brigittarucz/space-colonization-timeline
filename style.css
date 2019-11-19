@@ -1,4 +1,29 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,900&display=swap");
+#start {
+  position: fixed;
+  width: 150px;
+  cursor: pointer;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2; }
+  #start g circle {
+    stroke: #fff;
+    transition: all 0.5s; }
+  #start g path {
+    fill: #fff;
+    transition: all 0.5s; }
+  #start:hover circle,
+  #start:hover g circle {
+    stroke: #0cbfe9;
+    fill: transparent; }
+  #start:hover path,
+  #start:hover g path {
+    stroke: transparent;
+    fill: #0cbfe9; }
+
 *,
 *::after,
 *::before {
