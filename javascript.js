@@ -325,6 +325,10 @@ function addInfoboxes(dpNo) {
     globalDataEvents[0][keys[dpNo]]["country-organization"];
   infoboxes.querySelector(".memorable-contributors").textContent =
     globalDataEvents[0][keys[dpNo]]["memorable-contributors"];
+
+  infoboxes.querySelector(".quick-fact").textContent =
+    globalDataEvents[0][keys[dpNo]]["event-description"];
+
   infoboxes.style.marginTop = yTotalDataPointsArray[dpNo] - 435 + "px";
 }
 

@@ -14,3 +14,7 @@ img.svg-icon:nth-child(odd) {
 .heading-event {
   text-transform: capitalize;
 }
+
+img.svg-icon {
+  transform-style: preserve-3d;
+}

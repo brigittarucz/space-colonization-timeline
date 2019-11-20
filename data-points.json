@@ -9,12 +9,7 @@
       "mission-name": null,
       "country-organization": "The Netherlands",
       "event-description": [
-        "Dutch eyeglass maker Hans Lippershey (or Lipperhey) is widely credited as the first person to patent a telescope in 1608. His device",
-        "called a kijker ( looker )",
-        "was",
-        "according to Hans",
-        "able to magnify an image up to three times.  It consisted of a concave eyepiece that was aligned with another convex objective lens. According to legend",
-        "he conceived of the idea when seeing two children holding up two lenses that appeared to make a distant weather vane appear closer."
+        "The device was called a kijker (\"looker\") and, according to Hans, was able to magnify an image up to three times."
       ],
       "time": "Past",
       "data-link": " ",
@@ -29,13 +24,11 @@
       "mission-name": null,
       "country-organization": "Republic of Venice",
       "event-description": [
-        "In 1609",
-        "using this early version of the telescope",
-        "Galileo became the first person to record observations of the sky made with the help of a telescope. He soon made his first astronomical discovery."
+        "Using the early version of the telescope, Galileo became the first person to record observations of the sky made with the help of a telescope."
       ],
       "time": "Past",
       "data-link": null,
-      "image-link": null
+      "image-link": "observatory"
     },
     "first photograph of the moon": {
       "events": "first photograph of the moon",
@@ -46,10 +39,7 @@
       "mission-name": null,
       "country-organization": "United States",
       "event-description": [
-        "The first photograph of the moon was taken by John W. Draper on March 26",
-        "1840. The photograph was a Daguerreotype that Draper took from his rooftop observatory at New York University. The image has",
-        "since then",
-        "appeared to acquire a significant amount of physical damage."
+        "The photograph was a Daguerreotype that Draper took from his rooftop observatory at New York University."
       ],
       "time": "Past",
       "data-link": null,
@@ -66,13 +56,10 @@
       "event-description": "First proper observation of other galaxies which are termed \"whirlpool nebulae\".",
       "time": "Past",
       "data-link": null,
-      "image-link": null
+      "image-link": "galaxy"
     },
     "baloon flight, seeing the curve": {
-      "events": [
-        "baloon flight",
-        "seeing the curve"
-      ],
+      "events": ["baloon flight", "seeing the curve"],
       "date-of-discovery": "11 November",
       "year-of-discovery": "1935",
       "memorable-contributors": "Albert W. Stevens and Orvil A. Anderson",
@@ -80,10 +67,7 @@
       "mission-name": null,
       "country-organization": "United States",
       "event-description": [
-        "In 1935",
-        "Captains Orvil Anderson",
-        "William Kepner and Albert Stevens took a high-altitude balloon up to 74",
-        "000ft (22.4 kilometres) – high enough that they became the first humans to see the curvature of the Earth with the naked eye. The desire to soar even higher was born."
+        "Captains O.Anderson, W.Kepner and A.Stevens took a high-altitude balloon up to 22.4 km – high enough that they became the first humans to see the curvature of the Earth with the naked eye."
       ],
       "time": "Past",
       "data-link": null,
@@ -98,9 +82,7 @@
       "mission-name": "V-2",
       "country-organization": "United States",
       "event-description": [
-        "This is the first photograph of Earth ever taken from space. It was captured on 24 October 1946 from a rocket 105 km above the ground that had been launched from the White Sands Missile Range in New Mexico",
-        "USA. The rocket was a German V2",
-        "captured by the Americans at the end of World War II. Hundreds of scientists and engineers from the Nazi rocket program were vital to the postwar development of the American and Russian space programs."
+        "It was captured from a rocket 105 km above the ground. The rocket was a German V2, captured by the Americans at the end of World War II."
       ],
       "time": "Past",
       "data-link": null,
@@ -115,10 +97,7 @@
       "mission-name": "Sputnik 1",
       "country-organization": "USSR",
       "event-description": [
-        "Sputnik 1 was the first artificial Earth satellite.The Soviet Union launched it into an elliptical low Earth orbit on 4 October 1957",
-        "orbiting for three weeks before its batteries died",
-        "then silently for two more months before falling back into the atmosphere. It was a 58 cm (23 in) diameter polished metal sphere",
-        "with four external radio antennas to broadcast radio pulses."
+        "Sputnik 1 was the first artificial Earth satellite launched it into a low Earth orbit on 4 October 1957 by USSR. It orbited for three weeks before its batteries died."
       ],
       "time": "Past",
       "data-link": null,
@@ -133,10 +112,7 @@
       "mission-name": "Vostok 1",
       "country-organization": "USSR",
       "event-description": [
-        "Human spaceflight (also referred to as crewed spaceflight) is space travel with a crew or passengers aboard the spacecraft. Spacecraft carrying people may be operated directly",
-        "by human crew",
-        "or it may be either remotely operated from ground stations on Earth or be autonomous",
-        "able to carry out a specific mission with no human involvement."
+        "Spacecraft may be operated directly, by human crew but is also able to carry out a specific mission with no human involvement."
       ],
       "time": "Past",
       "data-link": null,
@@ -151,10 +127,7 @@
       "mission-name": "apollo 11",
       "country-organization": "USA (NASA)",
       "event-description": [
-        "On July 20 1969",
-        "American astronauts Neil Armstrong and Edwin 'Buzz' Aldrin became the first people to walk on the Moon. They had arrived in lunar orbit the day before with the third member of the Apollo 11 mission",
-        "Michael Collins",
-        "after a three-day flight from Earth"
+        "The astronauts had arrived in lunar orbit the day before with the third member of the Apollo 11 mission, Michael Collins, after a three-day flight from Earth."
       ],
       "time": "Past",
       "data-link": null,
@@ -169,10 +142,7 @@
       "mission-name": "Voyager 1",
       "country-organization": "USA (NASA)",
       "event-description": [
-        "The Family Portrait",
-        "or sometimes Portrait of the Planets",
-        "is an image of the Solar System acquired by Voyager 1 on February 14",
-        "1990 from a distance of approximately 6 billion kilometers from Earth. It features individual frames of six planets and a partial background indicating their relative positions. The picture is a mosaic of 60 individual frames."
+        "The Family Portrait is a picture taken from a distance of approximately 6 billion kilometers from Earth."
       ],
       "time": "Past",
       "data-link": null,
@@ -186,7 +156,7 @@
       "icon": "ISS",
       "mission-name": "ISS programme",
       "country-organization": "INternational",
-      "event-description": null,
+      "event-description": "Made up of hundreds of major and minor components, the ISS is the largest manned object ever put into space.",
       "time": "Past",
       "data-link": null,
       "image-link": "iss"
@@ -198,23 +168,9 @@
       "memorable-contributors": null,
       "icon": "planet",
       "mission-name": "Cassini–Huygens",
-      "country-organization": [
-        "USA ( NASA )",
-        "Italy",
-        "ESA"
-      ],
+      "country-organization": ["USA ( NASA )", "Italy", "ESA"],
       "event-description": [
-        "Launched aboard a Titan IVB/Centaur on October 15",
-        "1997",
-        "Cassini was active in space for nearly 20 years",
-        "with 13 years spent orbiting Saturn and studying the planet and its system after entering orbit on July 1",
-        "2004.[8] The voyage to Saturn included flybys of Venus (April 1998 and July 1999)",
-        "Earth (August 1999)",
-        "the asteroid 2685 Masursky",
-        "and Jupiter (December 2000). The mission ended on September 15",
-        "2017",
-        "when Cassini's trajectory took it into Saturn's upper atmosphere and it burned up[9][10] in order to prevent any risk of contaminating Saturn's moons",
-        "which might have offered habitable environments to stowaway terrestrial microbes on the spacecraft."
+        "The mission ended on September 15, 2017, when Cassini's trajectory took it into Saturn's upper atmosphere and it burned up."
       ],
       "time": "Past",
       "data-link": "https://en.wikipedia.org/wiki/Cassini%E2%80%93Huygens",
@@ -228,7 +184,7 @@
       "icon": "Falcon 9",
       "mission-name": null,
       "country-organization": "Space X",
-      "event-description": null,
+      "event-description": "SpaceX was founded in 2002 by Elon Musk with the goal of reducing space transportation costs to enable the colonization of Mars.",
       "time": "Past",
       "data-link": "https://www.spacex.com/falcon9",
       "image-link": "falcon-nine"
@@ -242,16 +198,11 @@
       "mission-name": "Mars 2020",
       "country-organization": "USA ( NASA )",
       "event-description": [
-        "The Mars 2020 mission involves landing a large roving vehicle on the surface of Mars to conduct mobile studies of the surface environment with particular emphasis on habitability",
-        "past life",
-        "and sample collection for future missions. The primary science objctives of Mars 2020 are to identify past environments capable of supporting microbial life",
-        "seeking signs of possible past microbial life",
-        "collecting core rock and regolith samples and caching them on the surface for future missions",
-        "and testing oxygen production from the martian atmosphere."
+        "The goal is to identify past environments capable of supporting microbial life, seeking signs of possible past microbial life."
       ],
       "time": "Future",
       "data-link": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=MARS-2020",
-      "image-link": null
+      "image-link": "mars-rover"
     },
     "Launch of ESA mission to the Jupiter system": {
       "events": "Launch of ESA mission to the Jupiter system",
@@ -262,14 +213,11 @@
       "mission-name": "JUpiter ICy moons Explorer (JUICE)",
       "country-organization": "USA ( NASA )",
       "event-description": [
-        "The JUpiter ICy moons Explorer (JUICE) is a European Space Agency (ESA) mission to make multiple flybys of Jupiter's satellites Ganymede",
-        "Callisto",
-        "and Europa and then to go into orbit around Ganymede. The science goals focus on Jupiter and its system",
-        "with particular emphasis on Ganymede as a planetary body and potential habitat"
+        "The science goals focus on Jupiter and its system, with particular emphasis on Ganymede as a planetary body and potential habitat."
       ],
       "time": "Future",
       "data-link": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=JUICE",
-      "image-link": null
+      "image-link": "jupiter"
     },
     "Launch of NASA Jupiter Orbiter to study Europa": {
       "events": "Launch of NASA Jupiter Orbiter to study Europa",
@@ -280,15 +228,11 @@
       "mission-name": "Europa Clipper",
       "country-organization": "USA ( NASA ) ",
       "event-description": [
-        "The mission is scheduled for launch in the 2023 - 2025 time frame. Depending on launch vehicle",
-        "Europa Clipper may take a direct route to Jupiter",
-        "or will require multiple planetary flybys and more time to reach its goal. Once at Jupiter",
-        "the spacecraft will enter a highly elliptical orbit that will allow approximately 40 - 45 flybys of Europa",
-        "at distances of 2700 km to 25 km above the surface. It will also fly by Ganymede and Callisto as part of its orbit-shaping maneuvers."
+        "Europa Clipper may take a direct route to Jupiter, or will require multiple planetary flybys and more time to reach its goal."
       ],
       "time": "Future",
       "data-link": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=EUROPA-CL",
-      "image-link": null
+      "image-link": "spaceship"
     },
     "": {
       "events": null,
