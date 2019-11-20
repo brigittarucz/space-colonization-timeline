@@ -264,33 +264,37 @@ function addEventsDP() {
     el.classList.add("dp-no" + i);
     i++;
   });
-  dataPoints.forEach(el => el.addEventListener("click", showDetails));
+  dataPoints.forEach(el => {
+    el.addEventListener("click", e => {
+      // search for any previous instances open
+      e.target.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center"
+      });
+      document.querySelector("#three-line-svg") != undefined
+        ? document.querySelector("#three-line-svg").remove()
+        : console.log();
+
+      // getBoundingClientRect gives you relative coords to the whole doc
+      // let coordsClickedObj = event.target.getBoundingClientRect();
+
+      let dpNo =
+        event.target.parentElement.parentElement.parentElement.classList[1];
+      dpNo = dpNo.slice(5);
+
+      fetch(threeBranchLink)
+        .then(e => e.text())
+        .then(svgData => {
+          let parentContainer = document.querySelector("#svg-info");
+          parentContainer.innerHTML += svgData;
+          positionSVGInfo(dpNo);
+        });
+    });
+  });
 }
 
 let threeBranchLink = "./assets/NEWESTconstelation.svg";
-
-function showDetails() {
-  // search for any previous instances open
-
-  document.querySelector("#three-line-svg") != undefined
-    ? document.querySelector("#three-line-svg").remove()
-    : console.log();
-
-  // getBoundingClientRect gives you relative coords to the whole doc
-  // let coordsClickedObj = event.target.getBoundingClientRect();
-
-  let dpNo =
-    event.target.parentElement.parentElement.parentElement.classList[1];
-  dpNo = dpNo.slice(5);
-
-  fetch(threeBranchLink)
-    .then(e => e.text())
-    .then(svgData => {
-      let parentContainer = document.querySelector("#svg-info");
-      parentContainer.innerHTML += svgData;
-      positionSVGInfo(dpNo);
-    });
-}
 
 // #line-three-svg id for the group itself
 // #three-line-svg for the whole svg selection
@@ -309,16 +313,8 @@ function addInfoboxes(dpNo) {
   infoboxes.style.display = "block";
   let keys = Object.keys(globalDataEvents[0]);
   let titleEvent = globalDataEvents[0][keys[dpNo]]["events"];
-  let spanLetters = "";
 
-  for (let i = 0; i < titleEvent.length; i++) {
-    if (titleEvent[i] != " ") {
-      spanLetters += `<span> ${titleEvent[i]} </span>`;
-    } else {
-      spanLetters += " ";
-    }
-  }
-  infoboxes.querySelector("h2").innerHTML = spanLetters;
+  infoboxes.querySelector("h2").innerHTML = titleEvent;
   infoboxes.querySelector(".country-involved").textContent =
     globalDataEvents[0][keys[dpNo]]["country-organization"];
   infoboxes.querySelector(".memorable-contributors").textContent =
