@@ -134,7 +134,7 @@ svg {
     margin-left: 150px;
     margin-top: -355px;
     animation: float 6s linear infinite alternate; }
-  .center-container img {
+  .center-container .svg-icon {
     position: absolute;
     width: 35rem;
     top: -11rem; }
@@ -205,11 +205,11 @@ canvas {
     letter-spacing: 0px;
     opacity: 1; } }
 
-img.svg-icon:nth-child(odd) {
+.svg-icon:nth-child(odd) {
   right: 19rem; }
 
 .heading-event {
   text-transform: capitalize; }
 
-img.svg-icon {
+.svg-icon {
   transform-style: preserve-3d; }

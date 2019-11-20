@@ -233,19 +233,6 @@
       "time": "Future",
       "data-link": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=EUROPA-CL",
       "image-link": "spaceship"
-    },
-    "": {
-      "events": null,
-      "date-of-discovery": null,
-      "year-of-discovery": null,
-      "memorable-contributors": null,
-      "icon": " ",
-      "mission-name": "    ",
-      "country-organization": null,
-      "event-description": null,
-      "time": null,
-      "data-link": null,
-      "image-link": null
     }
   }
 ]

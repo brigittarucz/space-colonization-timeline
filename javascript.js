@@ -82,7 +82,6 @@ function populateTimeline() {
     lineLength = (currentYear - startingYear) * 40 + 498.5;
   }
 
-  console.log(lineLength);
   generateTimeline(lineLength);
 }
 
@@ -138,11 +137,7 @@ function positionYearsTimeline() {
     yFutureDataPointsArray[i] -= 1970;
   }
 
-  console.log(yearsParagraphsArray);
-
   yTotalDataPointsArray = yDataPointsArray.concat(yFutureDataPointsArray);
-
-  console.log(yTotalDataPointsArray);
 
   findBigGaps();
 
@@ -191,7 +186,6 @@ function populateFutureTimeline() {
 
   let dataPoint = document.querySelector("#future-data-point");
   let parentContainer = document.querySelector("#future-parent-container");
-  console.log(futureYearsArray);
 
   let startingYear = futureYearsArray[0];
   parseInt(startingYear);
@@ -239,12 +233,16 @@ function addIconsTimeline() {
   let keys = Object.keys(globalDataEvents[0]);
   let lengthObject = keys.length;
   for (let i = 0; i < lengthObject; i++) {
-    let img = document.createElement("img");
-    img.src = `./assets/svg-icons/${
-      globalDataEvents[0][keys[i]]["image-link"]
-    }.svg`;
-    img.setAttribute("class", "svg-icon");
-    parentContainer.appendChild(img);
+    let theIcon = document.createElement("div");
+    let nameOfIcon = globalDataEvents[0][keys[i]]["image-link"];
+    fetch(`assets/svg-icons/${nameOfIcon}.svg`)
+      .then(e => e.text())
+      .then(svg => {
+        theIcon.innerHTML = svg;
+      });
+
+    theIcon.setAttribute("class", "svg-icon");
+    parentContainer.appendChild(theIcon);
   }
   positionIcons();
 }
@@ -276,7 +274,7 @@ function showDetails() {
 
   document.querySelector("#three-line-svg") != undefined
     ? document.querySelector("#three-line-svg").remove()
-    : console.log("ok");
+    : console.log();
 
   // getBoundingClientRect gives you relative coords to the whole doc
   // let coordsClickedObj = event.target.getBoundingClientRect();
@@ -312,7 +310,7 @@ function addInfoboxes(dpNo) {
   let keys = Object.keys(globalDataEvents[0]);
   let titleEvent = globalDataEvents[0][keys[dpNo]]["events"];
   let spanLetters = "";
-  console.log(titleEvent);
+
   for (let i = 0; i < titleEvent.length; i++) {
     if (titleEvent[i] != " ") {
       spanLetters += `<span> ${titleEvent[i]} </span>`;
@@ -342,11 +340,9 @@ function findBigGaps() {
       });
     }
   }
-  console.log(bigGaps);
 }
 
 window.addEventListener("scroll", e => {
-  console.clear();
   let scroller = Math.round(window.scrollY);
 
   let shown = false;

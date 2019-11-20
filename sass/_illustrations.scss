@@ -7,7 +7,7 @@
 //   }
 // }
 
-img.svg-icon:nth-child(odd) {
+.svg-icon:nth-child(odd) {
   right: 19rem;
 }
 
@@ -15,6 +15,6 @@ img.svg-icon:nth-child(odd) {
   text-transform: capitalize;
 }
 
-img.svg-icon {
+.svg-icon {
   transform-style: preserve-3d;
 }
