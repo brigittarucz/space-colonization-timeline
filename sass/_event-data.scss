@@ -4,6 +4,12 @@ svg {
 
 .yearParagraph {
   position: absolute;
+  right: -6rem;
+}
+
+.yearParagraph:nth-child(odd) {
+  position: absolute;
+  right: -17rem;
 }
 
 .colonized-planet {
