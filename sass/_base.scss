@@ -27,3 +27,8 @@ body {
   font-family: Roboto, sans-serif;
   color: $color-font;
 }
+
+.general-data-point {
+  cursor: pointer;
+  z-index: 10000;
+}
