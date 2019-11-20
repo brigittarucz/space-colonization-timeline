@@ -3,6 +3,7 @@
   font-family: "Znikomit";
   src: url("Znikomit.otf") format("opentype");
 }
+
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,900&display=swap");
 
 //STYLES
@@ -31,9 +32,7 @@
 }
 
 .heading-event {
-  font-weight: 500;
-  font-size: 3rem;
-  color: #fff;
+  font-family: Roboto;
 }
 
 .heading-box {

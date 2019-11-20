@@ -1,32 +1,57 @@
+// .heading-event {
+//   & > * {
+//     display: inline-block;
+//     transform: translate3d(0, 0, 0);
+//     transform-style: preserve-3d;
+//     perspective: 1000px;
+//     opacity: 0;
+//     animation: animateRotation 2.5s forwards;
+//     text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+//     text-transform: uppercase;
+//   }
+// }
+
+// @keyframes animateRotation {
+//   0% {
+//     transform: rotateY(-70deg) translateZ(-160px);
+//     text-shadow: 0 0 50px $color-2;
+//     letter-spacing: 10px;
+//   }
+//   50% {
+//     text-shadow: 0 0 10px $color-2;
+//     transform: translateY(-30deg);
+//     text-shadow: 0 0 5px $color-2;
+//     letter-spacing: 0px;
+//   }
+//   100% {
+//     text-shadow: 1px 1px 4px $color-2, 0 0 1em $color-2, 0 0 0.2em $color-2;
+//     transform: rotateY(0) translateZ(0);
+//     letter-spacing: 0px;
+//     opacity: 1;
+//   }
+// }
+
 .heading-event {
-  & > * {
-    display: inline-block;
-    transform: translate3d(0, 0, 0);
-    transform-style: preserve-3d;
-    perspective: 1000px;
-    opacity: 0;
-    animation: animateRotation 2.5s forwards;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-    text-transform: uppercase;
-  }
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 3rem;
+
+  text-shadow: -1px -1px 0 $color-1, 1px -1px 0 $color-1, -1px 1px 0 $color-1,
+    1px 1px 0 $color-1;
+  color: black;
+
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
-@keyframes animateRotation {
+@keyframes tracking-in-expand {
   0% {
-    transform: rotateY(-70deg) translateZ(-160px);
-    text-shadow: 0 0 50px $color-2;
-    letter-spacing: 10px;
+    letter-spacing: -0.5em;
+    opacity: 0;
   }
-  50% {
-    text-shadow: 0 0 10px $color-2;
-    transform: translateY(-30deg);
-    text-shadow: 0 0 5px $color-2;
-    letter-spacing: 0px;
+  40% {
+    opacity: 0.6;
   }
   100% {
-    text-shadow: 1px 1px 4px $color-2, 0 0 1em $color-2, 0 0 0.2em $color-2;
-    transform: rotateY(0) translateZ(0);
-    letter-spacing: 0px;
     opacity: 1;
   }
 }
