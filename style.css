@@ -1,30 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,900&display=swap");
-#start {
-  position: fixed;
-  width: 150px;
-  cursor: pointer;
-  bottom: 2%;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s;
-  z-index: 5; }
-  #start g circle {
-    stroke: #fff;
-    transition: all 0.5s; }
-  #start g path {
-    fill: #fff;
-    transition: all 0.5s; }
-  #start:hover circle,
-  #start:hover g circle {
-    stroke: #0cbfe9;
-    fill: transparent; }
-  #start:hover path,
-  #start:hover g path {
-    stroke: transparent;
-    fill: #0cbfe9; }
-
 *,
 *::after,
 *::before {
@@ -46,6 +20,32 @@ body {
   cursor: pointer;
   z-index: 10000; }
 
+#start {
+  position: fixed;
+  width: 150px;
+  cursor: pointer;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s;
+  z-index: 5; }
+  #start g circle {
+    stroke: #fff;
+    transition: all 0.5s; }
+  #start g path {
+    fill: #fff;
+    transition: all 0.5s; }
+  #start:hover circle,
+  #start:hover g circle {
+    stroke: #ffe81f;
+    fill: transparent; }
+  #start:hover path,
+  #start:hover g path {
+    stroke: transparent;
+    fill: #ffe81f; }
+
 @font-face {
   font-family: "Znikomit";
   src: url("Znikomit.otf") format("opentype"); }
@@ -66,6 +66,9 @@ body {
   .heading-primary_small {
     display: block;
     font-size: 5.5rem; }
+
+.last-heading {
+  margin-top: 0; }
 
 .heading-event {
   font-family: Roboto; }
