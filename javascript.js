@@ -272,6 +272,7 @@ function addEventsDP() {
         block: "center",
         inline: "center"
       });
+
       document.querySelector("#three-line-svg") != undefined
         ? document.querySelector("#three-line-svg").remove()
         : console.log();
@@ -290,6 +291,31 @@ function addEventsDP() {
           parentContainer.innerHTML += svgData;
           positionSVGInfo(dpNo);
         });
+
+      setTimeout(function() {
+        let iAmTired = yDataPointsArray[dpNo] + 130;
+
+        if (iAmTired) {
+          document
+            .querySelector(".fallingStar")
+            .setAttribute(
+              "transform",
+              "matrix(1,0,0,1,918.5," + iAmTired + ")"
+            );
+        } else {
+          iAmTired = yFutureDataPointsArray[dpNo - 13] + 130;
+          let godamnstar = document.querySelector(".fallingStar");
+          document
+            .querySelector("#timeline-container > svg:nth-child(2)")
+            .append(godamnstar);
+          document
+            .querySelector(".fallingStar")
+            .setAttribute(
+              "transform",
+              "matrix(1,0,0,1,53," + (iAmTired - 17281) + ")"
+            );
+        }
+      }, 600);
     });
   });
 }
