@@ -234,6 +234,7 @@ function addIconsTimeline() {
   let lengthObject = keys.length;
   for (let i = 0; i < lengthObject; i++) {
     let theIcon = document.createElement("div");
+
     let nameOfIcon = globalDataEvents[0][keys[i]]["image-link"];
     fetch(`assets/svg-icons/${nameOfIcon}.svg`)
       .then(e => e.text())
@@ -241,7 +242,12 @@ function addIconsTimeline() {
         theIcon.innerHTML = svg;
       });
 
-    theIcon.setAttribute("class", "svg-icon");
+    theIcon.setAttribute("class", `svg-icon dp${i}`);
+    theIcon.style.cursor = "pointer";
+    theIcon.addEventListener("click", e => {
+      openInfoSVG(e);
+    });
+
     parentContainer.appendChild(theIcon);
   }
   positionIcons();
@@ -267,57 +273,100 @@ function addEventsDP() {
   dataPoints.forEach(el => {
     el.addEventListener("click", e => {
       // search for any previous instances open
-      e.target.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "center"
-      });
-
-      document.querySelector("#three-line-svg") != undefined
-        ? document.querySelector("#three-line-svg").remove()
-        : console.log();
-
-      // getBoundingClientRect gives you relative coords to the whole doc
-      // let coordsClickedObj = event.target.getBoundingClientRect();
-
-      let dpNo =
-        event.target.parentElement.parentElement.parentElement.classList[1];
-      dpNo = dpNo.slice(5);
-
-      fetch(threeBranchLink)
-        .then(e => e.text())
-        .then(svgData => {
-          let parentContainer = document.querySelector("#svg-info");
-          parentContainer.innerHTML += svgData;
-          positionSVGInfo(dpNo);
-        });
-
-      setTimeout(function() {
-        let iAmTired = yDataPointsArray[dpNo] + 130;
-
-        if (iAmTired) {
-          document
-            .querySelector(".fallingStar")
-            .setAttribute(
-              "transform",
-              "matrix(1,0,0,1,918.5," + iAmTired + ")"
-            );
-        } else {
-          iAmTired = yFutureDataPointsArray[dpNo - 13] + 130;
-          let godamnstar = document.querySelector(".fallingStar");
-          document
-            .querySelector("#timeline-container > svg:nth-child(2)")
-            .append(godamnstar);
-          document
-            .querySelector(".fallingStar")
-            .setAttribute(
-              "transform",
-              "matrix(1,0,0,1,53," + (iAmTired - 17281) + ")"
-            );
-        }
-      }, 600);
+      openInfo(e);
     });
   });
+}
+
+function openInfoSVG(e) {
+  e.target.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+    inline: "center"
+  });
+
+  let dpNo = e.target.classList[1];
+  dpNo = dpNo.slice(2);
+
+  fetch(threeBranchLink)
+    .then(e => e.text())
+    .then(svgData => {
+      let parentContainer = document.querySelector("#svg-info");
+      parentContainer.innerHTML += svgData;
+      positionSVGInfo(dpNo);
+    });
+
+  setTimeout(function() {
+    let iAmTired = yDataPointsArray[dpNo] + 130;
+
+    if (iAmTired) {
+      document
+        .querySelector(".fallingStar")
+        .setAttribute("transform", "matrix(1,0,0,1,918.5," + iAmTired + ")");
+    } else {
+      iAmTired = yFutureDataPointsArray[dpNo - 13] + 130;
+      let godamnstar = document.querySelector(".fallingStar");
+      document
+        .querySelector("#timeline-container > svg:nth-child(2)")
+        .append(godamnstar);
+      document
+        .querySelector(".fallingStar")
+        .setAttribute(
+          "transform",
+          "matrix(1,0,0,1,53," + (iAmTired - 17281) + ")"
+        );
+    }
+  }, 600);
+}
+
+function openInfo(e) {
+  e.target.scrollIntoView({
+    behavior: "smooth",
+    block: "center",
+    inline: "center"
+  });
+
+  // document.querySelector("#three-line-svg") != undefined
+  //   ? document.querySelector("#three-line-svg").remove()
+  //   : console.log();
+
+  // getBoundingClientRect gives you relative coords to the whole doc
+  // let coordsClickedObj = event.target.getBoundingClientRect();
+
+  let dpNo =
+    event.target.parentElement.parentElement.parentElement.classList[1];
+
+  dpNo = dpNo.slice(5);
+
+  fetch(threeBranchLink)
+    .then(e => e.text())
+    .then(svgData => {
+      let parentContainer = document.querySelector("#svg-info");
+      parentContainer.innerHTML += svgData;
+      positionSVGInfo(dpNo);
+    });
+
+  setTimeout(function() {
+    let iAmTired = yDataPointsArray[dpNo] + 130;
+
+    if (iAmTired) {
+      document
+        .querySelector(".fallingStar")
+        .setAttribute("transform", "matrix(1,0,0,1,918.5," + iAmTired + ")");
+    } else {
+      iAmTired = yFutureDataPointsArray[dpNo - 13] + 130;
+      let godamnstar = document.querySelector(".fallingStar");
+      document
+        .querySelector("#timeline-container > svg:nth-child(2)")
+        .append(godamnstar);
+      document
+        .querySelector(".fallingStar")
+        .setAttribute(
+          "transform",
+          "matrix(1,0,0,1,53," + (iAmTired - 17281) + ")"
+        );
+    }
+  }, 600);
 }
 
 let threeBranchLink = "./assets/NEWESTconstelation.svg";
