@@ -28,9 +28,15 @@ let yTotalDataPointsArray = [];
 let globalDataEvents = [];
 let bigGaps = [];
 
-fetch(dataPointsLink)
-  .then(e => e.json())
-  .then(dataEvents => showDataEvents(dataEvents));
+window.onload = function() {
+  start();
+};
+
+function start() {
+  fetch(dataPointsLink)
+    .then(e => e.json())
+    .then(dataEvents => showDataEvents(dataEvents));
+}
 
 function showDataEvents(dataEvents) {
   globalDataEvents = dataEvents;
@@ -43,10 +49,21 @@ function showDataEvents(dataEvents) {
       futureYearsArray.push(dataEvents[0][keys[i]]["year-of-discovery"]);
     }
   }
+  setTimeout(() => {
+    populateTimeline();
+  }, 1000);
 
-  populateTimeline();
+  setTimeout(() => {
+    showAll();
+  }, 2000);
 }
 
+function showAll() {
+  document
+    .querySelector("main")
+    .setAttribute("style", "display: block !important");
+  document.querySelector("body > div").style.display = "none";
+}
 // 1 year = 40;
 // y = 450 data-point start
 
@@ -320,7 +337,7 @@ function addEventsDP() {
   });
 }
 
-let threeBranchLink = "./assets/NEWESTconstelation.svg";
+//let threeBranchLink = "./assets/NEWESTconstelation.svg";
 
 // #line-three-svg id for the group itself
 // #three-line-svg for the whole svg selection

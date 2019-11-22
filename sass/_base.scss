@@ -26,6 +26,9 @@ body {
   background: #000;
   font-family: Roboto, sans-serif;
   color: $color-font;
+  main {
+    display: none !important;
+  }
 }
 
 .general-data-point {
