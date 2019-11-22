@@ -1,5 +1,6 @@
 let timelineContainer = document.querySelector("#timeline-container");
 let timelineSVGLink = "./assets/NEWtimeline.svg";
+var audio = new Audio("assets/nasa_jupiter_sound.mp3");
 
 let hyperjump = false;
 
@@ -30,6 +31,7 @@ let bigGaps = [];
 
 window.onload = function() {
   start();
+  audio.play();
 };
 
 function start() {
@@ -412,7 +414,9 @@ const musicBtn = document.querySelector(".sound-btn");
 musicBtn.addEventListener("click", function() {
   if (musicBtn.classList.contains("animate-sound")) {
     musicBtn.classList.remove("animate-sound");
+    audio.pause();
   } else {
     musicBtn.classList.add("animate-sound");
+    audio.play();
   }
 });
