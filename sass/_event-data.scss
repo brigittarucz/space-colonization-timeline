@@ -47,6 +47,9 @@ svg {
     position: absolute;
     width: 35rem;
     top: -11rem;
+    svg {
+      pointer-events: none;
+    }
   }
 }
 
