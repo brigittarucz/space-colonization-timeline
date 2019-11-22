@@ -337,7 +337,7 @@ function addEventsDP() {
   });
 }
 
-//let threeBranchLink = "./assets/NEWESTconstelation.svg";
+let threeBranchLink = "./assets/NEWESTconstelation.svg";
 
 // #line-three-svg id for the group itself
 // #three-line-svg for the whole svg selection
@@ -387,10 +387,10 @@ window.addEventListener("scroll", e => {
   let shown = false;
   for (let i = 0; i < bigGaps.length; i++) {
     const gap = bigGaps[i];
-    if (scroller > gap.startPoint && scroller < gap.endPoint - 900) {
+    if (scroller > gap.startPoint + 300 && scroller < gap.endPoint - 900) {
       shown = true;
       document.querySelector("#start").addEventListener("click", e => {
-        window.scrollTo(0, gap.endPoint);
+        window.scrollTo(0, gap.endPoint + 100);
         hyperjump = true;
         setTimeout(() => {
           hyperjump = false;
@@ -404,5 +404,15 @@ window.addEventListener("scroll", e => {
   } else {
     document.querySelector("#start").style.opacity = 0;
     document.querySelector("#start").style.visibility = "hidden";
+  }
+});
+
+const musicBtn = document.querySelector(".sound-btn");
+
+musicBtn.addEventListener("click", function() {
+  if (musicBtn.classList.contains("animate-sound")) {
+    musicBtn.classList.remove("animate-sound");
+  } else {
+    musicBtn.classList.add("animate-sound");
   }
 });
