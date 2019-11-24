@@ -11,6 +11,9 @@
   right: 19rem;
 }
 
-.svg-icon {
+svg {
   transform-style: preserve-3d;
+  &:hover {
+    stroke: yellow;
+  }
 }

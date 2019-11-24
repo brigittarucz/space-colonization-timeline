@@ -432,6 +432,12 @@ function findBigGaps() {
   }
 }
 
+document.querySelector("#journey").addEventListener("click", e => {
+  window.scrollTo(0, 500);
+  document.querySelector("#journey").style.animation =
+    "slide-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both";
+});
+
 window.addEventListener("scroll", e => {
   let scroller = Math.round(window.scrollY);
 
