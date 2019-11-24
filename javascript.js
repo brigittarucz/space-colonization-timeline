@@ -31,7 +31,6 @@ let bigGaps = [];
 
 window.onload = function() {
   start();
-  audio.play();
 };
 
 function start() {
@@ -433,6 +432,13 @@ function findBigGaps() {
 }
 
 document.querySelector("#journey").addEventListener("click", e => {
+  document.querySelector("html").style.overflowY = "scroll";
+  document.querySelector("html").style.overflowX = "hidden";
+  document.querySelector("body > main > div.heading").style.gridTemplateRows =
+    "unset";
+  audio.play();
+  document.querySelector("body > main > div.heading > h2").style.display =
+    "none";
   window.scrollTo(0, 500);
   document.querySelector("#journey").style.animation =
     "slide-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both";

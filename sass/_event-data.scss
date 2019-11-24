@@ -12,10 +12,13 @@ svg {
   right: -17rem;
 }
 
+.colony {
+  display: grid;
+  justify-items: center;
+}
 .colonized-planet {
-  width: 189px;
+  width: 500px;
   padding: 20px;
-  margin-left: calc(50% - 100px);
 }
 
 #timeline-svg {
